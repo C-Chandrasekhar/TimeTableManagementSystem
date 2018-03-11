@@ -10,7 +10,7 @@ public class Class {
     private MeetingTime meetingTime;
     private Room room;
     
-    public Class (int id , Course course , Department dpt){
+    public Class (int id , Department dpt , Course course){
         this.id=id;
         this.course=course;
         this.department=dpt;

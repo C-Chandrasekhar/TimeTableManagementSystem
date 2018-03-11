@@ -17,24 +17,6 @@ public class Data {
     private ArrayList<MeetingTime> meetingTimes;
     private int numberOfClasses=0;
     
-    public ArrayList<Room> getRooms(){
-        return rooms;
-    }
-    public ArrayList<Instructor> getInstructors(){
-        return instructors;
-    }
-    public ArrayList<Department> getDepartments(){
-        return departments;
-    }
-    public ArrayList <Course> getCourses(){
-        return courses;
-    }
-    public ArrayList<MeetingTime> getMeetinTimes(){
-        return meetingTimes;
-    }
-    public int getNumberOfClasses(){
-        return numberOfClasses;
-    }
     
     public Data (){
         initialise();
@@ -76,5 +58,24 @@ public class Data {
             numberOfClasses += departments.get(i).getCourses().size();
         }
         return this;
+    }
+    
+    public ArrayList<Room> getRooms(){
+        return rooms;
+    }
+    public ArrayList<Instructor> getInstructors(){
+        return instructors;
+    }
+    public ArrayList<Department> getDepartments(){
+        return departments;
+    }
+    public ArrayList <Course> getCourses(){
+        return courses;
+    }
+    public ArrayList<MeetingTime> getMeetingTimes(){
+        return meetingTimes;
+    }
+    public int getNumberOfClasses(){
+        return numberOfClasses;
     }
 }
