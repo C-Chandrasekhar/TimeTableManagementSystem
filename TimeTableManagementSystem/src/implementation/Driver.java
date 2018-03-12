@@ -25,12 +25,23 @@ public class Driver {
         driver.printAvailableData();
         
         GeneticAlgorithm geneticAlgorithm = new GeneticAlgorithm(driver.data);
-        Population population = new Population(Driver.POPULATION_SIZE, driver.data);
+        Population population = new Population(Driver.POPULATION_SIZE, driver.data).sortByFitness();
+        
+        while(population.getSchedules().get(0).getFitness()!=1.0){
+            population = geneticAlgorithm.evolve(population).sortByFitness();
+        }
+        /*for (int i=0;i<population.getSchedules().size();i++){
+            Schedule schedule=population.getSchedules().get(i);
+            System.out.println("       "+ schedule + "      " );
+             System.out.println(schedule.getFitness());
+             System.out.println(schedule.getNumberOfConflicts());
+        }*/
         population.getSchedules().forEach(x ->
-                System.out.println("        "+driver.scheduleNumb++ 
-                        +"      "+ x + "      " + String.format("%.5f", x.getFitness()) +"  |  " +x.getNumberOfConflicts())
+                System.out.println(x+ "  |  " +
+                        String.format("%.5f", x.getFitness()) +"  |  " +x.getNumberOfConflicts())
         );
     }
+    
     
     private void printAvailableData(){
         

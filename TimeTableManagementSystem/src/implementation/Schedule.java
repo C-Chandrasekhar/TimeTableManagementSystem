@@ -26,7 +26,6 @@ public class Schedule {
     }
     
     public Schedule initialise(){
-        
         ArrayList<Department> dept=new ArrayList<Department> (data.getDepartments());
         for (int i=0;i<dept.size();i++){
             ArrayList<Course> course= new ArrayList<Course> (dept.get(i).getCourses());
@@ -63,13 +62,12 @@ public class Schedule {
     
     public double calculateFitness(){
         numberOfConflicts=0;
-        
         for (int i=0;i<classes.size(); i++){
             Class x= classes.get(i);
             if(x.getRoom().getCapacity() < x.getDepartment().getCapacity())
                 numberOfConflicts++;
             
-            for (int j=0;j<classes.size();i++){
+            for (int j=0;j<classes.size();j++){
                 Class y = classes.get(j);
                 if(y.getMeetingTime() == x.getMeetingTime() && y.getId()!= x.getId()){
                     if(x.getRoom()== y.getRoom())

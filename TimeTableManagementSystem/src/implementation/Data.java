@@ -24,6 +24,7 @@ public class Data {
     
     private Data initialise(){
         //initialising all data or taking input of all data
+        System.out.println("Inside Data initilization class");
         Room room1 = new Room("gs1", 50);
         Room room2 = new Room("gs2", 60);
         Room room3 = new Room("gs3", 70);
@@ -49,9 +50,9 @@ public class Data {
         Course course6= new Course("cname6" , "cid6" , new ArrayList<Instructor> (Arrays.asList(inst1 , inst4)));
         courses = new ArrayList<Course>(Arrays.asList(course1 , course2, course3, course4, course5, course6));
         
-        Department dept1= new Department("CSE",55 , new ArrayList<Course> (Arrays.asList(course1 , course2)));
+        Department dept1= new Department("CSE",55 , new ArrayList<Course> (Arrays.asList(course1 , course2 , course4)));
         Department dept2= new Department("IT",65 , new ArrayList<Course> (Arrays.asList(course3 , course4, course5)));
-        Department dept3= new Department("cse",45 , new ArrayList<Course> (Arrays.asList(course6)));
+        Department dept3= new Department("cse",45 , new ArrayList<Course> (Arrays.asList(course1 ,course2,course6)));
         departments = new ArrayList<Department> (Arrays.asList(dept1, dept2, dept3));
         
         for (int i=0;i<departments.size(); i++){
