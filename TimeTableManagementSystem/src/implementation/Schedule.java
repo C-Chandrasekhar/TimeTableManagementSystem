@@ -26,6 +26,7 @@ public class Schedule {
     }
     
     public Schedule initialise(){
+        
         ArrayList<Department> dept=new ArrayList<Department> (data.getDepartments());
         for (int i=0;i<dept.size();i++){
             ArrayList<Course> course= new ArrayList<Course> (dept.get(i).getCourses());
