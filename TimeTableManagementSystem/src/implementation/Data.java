@@ -33,7 +33,7 @@ public class Data {
         MeetingTime time2 = new MeetingTime("mon2" , "mon 9-10");
         MeetingTime time3 = new MeetingTime("tue2" , "mon 9-10");
         MeetingTime time4 = new MeetingTime("tue3" , "mon 10-11");
-        meetingTimes = new ArrayList<MeetingTime> (Arrays.asList(time1 , time2 , time3 , time4));
+        meetingTimes = new ArrayList <MeetingTime> (Arrays.asList(time1 , time2 , time3 , time4));
         
         Instructor inst1 = new Instructor("id1", "name1");
         Instructor inst2 = new Instructor("id2", "name2");
