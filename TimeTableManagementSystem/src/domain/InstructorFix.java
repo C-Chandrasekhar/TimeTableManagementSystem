@@ -9,6 +9,7 @@ package domain;
  *
  * @author chandrasekhar ch
  */
+
 public class InstructorFix {
     private Instructor instructor;
     private Course course;
@@ -24,5 +25,7 @@ public class InstructorFix {
         return instructor;
     }
     
-    
+    public Course getCourse(){
+        return course;
+    }
 }
