@@ -42,7 +42,9 @@ public class Driver {
         );
     }
     
-    
+    private void print(){
+        
+    }
     private void printAvailableData(){
         
         System.out.println("Available Departments=>");
