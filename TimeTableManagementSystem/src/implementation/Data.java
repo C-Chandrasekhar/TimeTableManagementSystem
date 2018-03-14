@@ -42,6 +42,12 @@ public class Data {
         Instructor inst4 = new Instructor("id4", "name4");
         instructors = new ArrayList<Instructor> (Arrays.asList(inst1 , inst2, inst3, inst4));
         
+//        Instructor inst1 = new Instructor("id1", "name1", "CSE" , "");
+//        Instructor inst2 = new Instructor("id2", "name2");
+//        Instructor inst3 = new Instructor("id3", "name3");
+//        Instructor inst4 = new Instructor("id4", "name4");
+        instructors = new ArrayList<Instructor> (Arrays.asList(inst1 , inst2, inst3, inst4));
+        
         Course course1= new Course("cname1" , "cid1" , new ArrayList<Instructor> (Arrays.asList(inst1 , inst2)));
         Course course7= new Course("cname1" , "cid1" , new ArrayList<Instructor> (Arrays.asList(inst1 , inst2)));
         Course course2= new Course("cname2" , "cid2" , new ArrayList<Instructor> (Arrays.asList(inst1 , inst3)));
@@ -67,6 +73,11 @@ public class Data {
     }
     public ArrayList<Instructor> getInstructors(){
         return instructors;
+    }
+    
+    public ArrayList<Instructor> getInstructorsFix(Course course , Department department){
+        
+        return null;
     }
     public ArrayList<Department> getDepartments(){
         return departments;

@@ -34,6 +34,11 @@ public class Schedule {
                
                newClass.setMeetingTime(data.getMeetingTimes().get((int)(data.getMeetingTimes().size() * Math.random())));
                newClass.setInstructor(data.getInstructors().get((int)(data.getInstructors().size()* Math.random())));
+               
+               newClass.setInstructor(data.getInstructorsFix(course.get(j), dept.get(i)).get((int)
+                       (data.getInstructorsFix(course.get(j), dept.get(i)).size()* Math.random())));
+               
+               
                newClass.setRoom(data.getRooms().get((int) (data.getRooms().size() * Math.random())));
                classes.add(newClass);
                
