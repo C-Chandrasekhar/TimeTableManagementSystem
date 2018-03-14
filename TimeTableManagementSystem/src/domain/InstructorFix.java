@@ -13,7 +13,7 @@ public class InstructorFix {
     private Instructor instructor;
     private Course course;
     private Department department;
-    
+     
     public InstructorFix(Department department, Course course , Instructor instructor){
         this.department=department;
         this.course=course;
