@@ -35,16 +35,27 @@ public class Driver {
             System.out.println("       "+ schedule + "      " );
              System.out.println(schedule.getFitness());
              System.out.println(schedule.getNumberOfConflicts());
-        }*/
+        }
         population.getSchedules().forEach(x ->
                 System.out.println(x+ "  |  " +
                         String.format("%.5f", x.getFitness()) +"  |  " +x.getNumberOfConflicts())
-        );
+        );*/
+        driver.printTimeTable(population.getSchedules().get(0));
     }
     
-    private void print(){
+    private void printTimeTable(Schedule schedule){
+        int n=schedule.getClasses().size();
         
+        for (int i=0;i<n;i++){
+            System.out.print(schedule.getClasses().get(i).getId() + "  |  ");
+            System.out.print(schedule.getClasses().get(i).getDepartment().getName()+ "  |  ");
+            System.out.print(schedule.getClasses().get(i).getCourse().getName()+"   |  ");
+            System.out.print(schedule.getClasses().get(i).getInstructor().getName()+"  |   ");
+            System.out.print(schedule.getClasses().get(i).getRoom().getId()+ "   |  ");
+            System.out.println(schedule.getClasses().get(i).getMeetingTime().getTime());
+        }
     }
+    
     private void printAvailableData(){
         
         System.out.println("Available Departments=>");

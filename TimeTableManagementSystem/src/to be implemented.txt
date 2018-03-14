@@ -1,0 +1,19 @@
+
+
+1.instructor is fixed for a department for a course
+
+
+2.implementing labs 
+    three hours should be adjacent
+
+3.take number of classes of each course
+
+4.Queries that we will be doing on our database
+    able to add classes
+    retriveing all the data
+    deleting etc.
+
+
+
+
+

@@ -43,16 +43,17 @@ public class Data {
         instructors = new ArrayList<Instructor> (Arrays.asList(inst1 , inst2, inst3, inst4));
         
         Course course1= new Course("cname1" , "cid1" , new ArrayList<Instructor> (Arrays.asList(inst1 , inst2)));
+        Course course7= new Course("cname1" , "cid1" , new ArrayList<Instructor> (Arrays.asList(inst1 , inst2)));
         Course course2= new Course("cname2" , "cid2" , new ArrayList<Instructor> (Arrays.asList(inst1 , inst3)));
         Course course3= new Course("cname3" , "cid3" , new ArrayList<Instructor> (Arrays.asList(inst2)));
         Course course4= new Course("cname4" , "cid4" , new ArrayList<Instructor> (Arrays.asList(inst1)));
         Course course5= new Course("cname5" , "cid5" , new ArrayList<Instructor> (Arrays.asList(inst3 , inst2)));
         Course course6= new Course("cname6" , "cid6" , new ArrayList<Instructor> (Arrays.asList(inst1 , inst4)));
-        courses = new ArrayList<Course>(Arrays.asList(course1 , course2, course3, course4, course5, course6));
+        courses = new ArrayList<Course>(Arrays.asList(course1 , course2, course3, course4, course5, course6, course7));
         
-        Department dept1= new Department("CSE",55 , new ArrayList<Course> (Arrays.asList(course1 , course2 , course4)));
+        Department dept1= new Department("CSE",55 , new ArrayList<Course> (Arrays.asList(course1 , course2 , course4, course7)));
         Department dept2= new Department("IT",65 , new ArrayList<Course> (Arrays.asList(course3 , course4, course5)));
-        Department dept3= new Department("cse",45 , new ArrayList<Course> (Arrays.asList(course1 ,course2,course6)));
+        Department dept3= new Department("cse",45 , new ArrayList<Course> (Arrays.asList(course1 ,course2,course6, course7)));
         departments = new ArrayList<Department> (Arrays.asList(dept1, dept2, dept3));
         
         for (int i=0;i<departments.size(); i++){

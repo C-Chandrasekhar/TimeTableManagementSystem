@@ -8,11 +8,13 @@ public class Course {
     private String name;
     private String id;
     private ArrayList<Instructor> instructors;
+    private int numOfClassesPerWeek;
     
-    public Course (String name , String id , ArrayList<Instructor> ins){
+    public Course (String name , String id , ArrayList<Instructor> ins ){
         this.name=name;
         this.id=id;
         this.instructors=ins;
+        this.numOfClassesPerWeek=numOfClassesPerWeek;
     }
     
     public String getId(){
@@ -24,6 +26,10 @@ public class Course {
     
     public ArrayList <Instructor> getInstructors(){
         return instructors;
+    }
+    
+    public int getNumOfClassesPerWeek(){
+        return numOfClassesPerWeek;
     }
     
     public String toString(){ 
