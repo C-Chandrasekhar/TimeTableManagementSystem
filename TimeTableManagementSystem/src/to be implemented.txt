@@ -1,7 +1,8 @@
 
 
-1.instructor is fixed for a department for a course
+1.instructor is fixed for a department for a course                 --- done :-)
 
+2a.Give every meeting time an unique id
 
 2.implementing labs 
     three hours should be adjacent

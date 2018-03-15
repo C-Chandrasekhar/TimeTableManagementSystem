@@ -4,11 +4,13 @@ package implementation;
 import domain.Course;
 import domain.Department;
 import domain.Class;
+import domain.InstructorFix;
 import java.util.ArrayList;
 
 
 public class Schedule {
     private ArrayList<Class> classes;
+    private ArrayList<InstructorFix> instructorsFix;
     private Data data;
     private int classNumber=0;
     
@@ -35,9 +37,18 @@ public class Schedule {
                newClass.setMeetingTime(data.getMeetingTimes().get((int)(data.getMeetingTimes().size() * Math.random())));
                newClass.setInstructor(data.getInstructors().get((int)(data.getInstructors().size()* Math.random())));
                
-               newClass.setInstructor(data.getInstructorsFix(course.get(j), dept.get(i)).get((int)
-                       (data.getInstructorsFix(course.get(j), dept.get(i)).size()* Math.random())));
                
+              instructorsFix=data.getInstructorsFix();
+              for (int ite=0;ite<instructorsFix.size();ite++){
+                  if(instructorsFix.get(ite).getDepartmentFix()== dept.get(i) 
+                          && instructorsFix.get(ite).getCourseFix()== course.get(j) )
+                       newClass.setInstructor(instructorsFix.get(ite).getInstructorFix());
+              }
+              
+
+//               newClass.setInstructor(data.getInstructorsFix(course.get(j), dept.get(i)).get((int)
+//                       (data.getInstructorsFix(course.get(j), dept.get(i)).size()* Math.random())));
+//               
                
                newClass.setRoom(data.getRooms().get((int) (data.getRooms().size() * Math.random())));
                classes.add(newClass);

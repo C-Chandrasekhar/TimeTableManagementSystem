@@ -21,11 +21,15 @@ public class InstructorFix {
         this.instructor=instructor;
     }
 
-    public Instructor getInstructorFix(Department department, Course course) {
+    public Instructor getInstructorFix() {
         return instructor;
     }
     
-    public Course getCourse(){
+    public Course getCourseFix(){
         return course;
+    }
+    
+    public Department getDepartmentFix(){
+        return department;
     }
 }
