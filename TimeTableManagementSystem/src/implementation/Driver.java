@@ -19,7 +19,7 @@ public class Driver {
      private int scheduleNumb=0;
      private Data data;
     public static void main(String args []){
-       
+        
         Driver driver= new Driver();
         driver.data=new Data();
         driver.printAvailableData();
@@ -27,8 +27,11 @@ public class Driver {
         GeneticAlgorithm geneticAlgorithm = new GeneticAlgorithm(driver.data);
         Population population = new Population(Driver.POPULATION_SIZE, driver.data).sortByFitness();
         
+        
+        int t=0;
         while(population.getSchedules().get(0).getFitness()!=1.0){
             population = geneticAlgorithm.evolve(population).sortByFitness();
+            t++;
         }
         /*for (int i=0;i<population.getSchedules().size();i++){
             Schedule schedule=population.getSchedules().get(i);
@@ -40,6 +43,7 @@ public class Driver {
                 System.out.println(x+ "  |  " +
                         String.format("%.5f", x.getFitness()) +"  |  " +x.getNumberOfConflicts())
         );*/
+        System.out.println("while loop runned for "+t);
         driver.printTimeTable(population.getSchedules().get(0));
     }
     
