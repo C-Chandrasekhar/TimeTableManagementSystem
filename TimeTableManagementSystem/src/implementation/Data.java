@@ -4,6 +4,7 @@ package implementation;
 import domain.Course;
 import domain.Department;
 import domain.Instructor;
+import domain.InstructorFix;
 import domain.MeetingTime;
 import domain.Room;
 import java.util.ArrayList;
@@ -16,6 +17,8 @@ public class Data {
     private ArrayList<Department> departments;
     private ArrayList<MeetingTime> meetingTimes;
     private int numberOfClasses=0;
+     ///implementing fix instructor
+    private ArrayList<InstructorFix> instructorFix;
     
     
     public Data (){
@@ -42,11 +45,7 @@ public class Data {
         Instructor inst4 = new Instructor("id4", "name4");
         instructors = new ArrayList<Instructor> (Arrays.asList(inst1 , inst2, inst3, inst4));
         
-//        Instructor inst1 = new Instructor("id1", "name1", "CSE" , "");
-//        Instructor inst2 = new Instructor("id2", "name2");
-//        Instructor inst3 = new Instructor("id3", "name3");
-//        Instructor inst4 = new Instructor("id4", "name4");
-        instructors = new ArrayList<Instructor> (Arrays.asList(inst1 , inst2, inst3, inst4));
+        
         
         Course course1= new Course("cname1" , "cid1" , new ArrayList<Instructor> (Arrays.asList(inst1 , inst2)));
         Course course7= new Course("cname1" , "cid1" , new ArrayList<Instructor> (Arrays.asList(inst1 , inst2)));
@@ -61,6 +60,13 @@ public class Data {
         Department dept2= new Department("IT",65 , new ArrayList<Course> (Arrays.asList(course3 , course4, course5)));
         Department dept3= new Department("cse",45 , new ArrayList<Course> (Arrays.asList(course1 ,course2,course6, course7)));
         departments = new ArrayList<Department> (Arrays.asList(dept1, dept2, dept3));
+        
+        InstructorFix instFix1 = new InstructorFix(dept1, course2,inst1);
+        InstructorFix instFix2 = new InstructorFix("id2", "name2");
+        InstructorFix instFix3 = new InstructorFix("id3", "name3");
+        InstructorFix instFix4 = new InstructorFix("id4", "name4");
+        
+        instructors = new ArrayList<Instructor> (Arrays.asList(inst1 , inst2, inst3, inst4));
         
         for (int i=0;i<departments.size(); i++){
             numberOfClasses += departments.get(i).getCourses().size();
