@@ -2,13 +2,13 @@
 
 1. instructor is fixed for a department for a course                 --- done :-)
 
-1a. Give every meeting time an unique id
+2a.Give every meeting time an unique id                             --- done :-(
 
-2. implementing labs 
+2.take number of classes of each course
+
+3.implementing labs 
     three hours should be adjacent
-
-3. take number of classes of each course
-
+    
 5. create UI
 
 6. create database which would easy to implement all below queries

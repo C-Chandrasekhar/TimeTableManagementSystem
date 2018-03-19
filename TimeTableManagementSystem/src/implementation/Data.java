@@ -33,10 +33,10 @@ public class Data {
         Room room3 = new Room("gs3", 70);
         rooms= new ArrayList<Room>(Arrays.asList(room1 , room2 , room3));
         
-        MeetingTime time1 = new MeetingTime("mon1" , "mon 8-9");
-        MeetingTime time2 = new MeetingTime("mon2" , "mon 9-10");
-        MeetingTime time3 = new MeetingTime("tue2" , "mon 9-10");
-        MeetingTime time4 = new MeetingTime("tue3" , "mon 10-11");
+        MeetingTime time1 = new MeetingTime("a1" );
+        MeetingTime time2 = new MeetingTime("a2" );
+        MeetingTime time3 = new MeetingTime("b2");
+        MeetingTime time4 = new MeetingTime("b3" );
         meetingTimes = new ArrayList <MeetingTime> (Arrays.asList(time1 , time2 , time3 , time4));
         
         Instructor inst1 = new Instructor("id1", "name1");
