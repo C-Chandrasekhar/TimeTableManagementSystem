@@ -2,6 +2,7 @@
 package domain;
 
 
+
 public class Class {
     private int id;
     private Course course;
