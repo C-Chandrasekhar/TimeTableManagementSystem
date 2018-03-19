@@ -31,9 +31,9 @@ public class Schedule {
         ArrayList<Department> dept=new ArrayList<Department> (data.getDepartments());
         for (int i=0;i<dept.size();i++){
             ArrayList<Course> course= new ArrayList<Course> (dept.get(i).getCourses());
-            
-           //<h1>a loop for number of classes for each course</h1>
+           
             for (int j=0;j<course.size();j++){
+                //<h1>a loop for number of classes for each course</h1>
                Class newClass = new Class(classNumber++ , dept.get(i), course.get(j));
                
                newClass.setMeetingTime(data.getMeetingTimes().get((int)(data.getMeetingTimes().size() * Math.random())));

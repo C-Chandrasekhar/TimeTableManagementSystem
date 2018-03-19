@@ -4,10 +4,10 @@
 
 2a.Give every meeting time an unique id
 
-2.implementing labs 
-    three hours should be adjacent
+2.take number of classes of each course
 
-3.take number of classes of each course
+3.implementing labs 
+    three hours should be adjacent
 
 4.Queries that we will be doing on our database
     able to add classes
