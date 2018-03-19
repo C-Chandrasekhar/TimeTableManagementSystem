@@ -2,7 +2,7 @@
 
 1.instructor is fixed for a department for a course                 --- done :-)
 
-2a.Give every meeting time an unique id
+2a.Give every meeting time an unique id                             --- done :-(
 
 2.take number of classes of each course
 
