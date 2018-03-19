@@ -10,7 +10,7 @@ public class Course {
     private ArrayList<Instructor> instructors;
     private int numOfClassesPerWeek;
     
-    public Course (String name , String id , ArrayList<Instructor> ins ){
+    public Course (String name , String id , ArrayList<Instructor> ins , int numOfClassesPerWeek){
         this.name=name;
         this.id=id;
         this.instructors=ins;
