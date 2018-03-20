@@ -34,11 +34,13 @@ public class Schedule {
            
             for (int j=0;j<course.size();j++){
                 //<h1>a loop for number of classes for each course</h1>
+                
+             for (int k=0;k<course.get(j).getNumOfClassesPerWeek();k++){
+                 
                Class newClass = new Class(classNumber++ , dept.get(i), course.get(j));
                
                newClass.setMeetingTime(data.getMeetingTimes().get((int)(data.getMeetingTimes().size() * Math.random())));
                newClass.setInstructor(data.getInstructors().get((int)(data.getInstructors().size()* Math.random())));
-               
                
               instructorsFix=data.getInstructorsFix();
               for (int ite=0;ite<instructorsFix.size();ite++){
@@ -55,8 +57,8 @@ public class Schedule {
                newClass.setRoom(data.getRooms().get((int) (data.getRooms().size() * Math.random())));
                classes.add(newClass);
                
+             }
             }
-            
         }
         return this;
     }
@@ -82,6 +84,10 @@ public class Schedule {
         numberOfConflicts=0;
         for (int i=0;i<classes.size(); i++){
             Class x= classes.get(i);
+            
+            if(x.getMeetingTime().getId().charAt(1)=='f'){
+                numberOfConflicts++;
+            }
             if(x.getRoom().getCapacity() < x.getDepartment().getCapacity())
                 numberOfConflicts++;
             

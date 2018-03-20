@@ -22,35 +22,16 @@ public class Data {
     private ArrayList<InstructorFix> instructorsFix;
     
     
-    public Data (){
+    public Data () {
         initialise();
     }
     
-    private Data initialise(){
+    private Data initialise() {
         //initialising all data or taking input of all data
-        System.out.println("Inside Data initilization class");
-        Room room1 = new Room("gs1", 100);
-        Room room2 = new Room("gs2", 100);
-        Room room3 = new Room("gs3", 100);
-        Room room4 = new Room("gs4", 100);
-        Room room5 = new Room("gs5", 100);
-        Room room6 = new Room("gs6", 100);
-        Room room7 = new Room("gs7", 100);
-        Room room8 = new Room("gs8", 100);
-        rooms= new ArrayList<Room>(Arrays.asList(room1 , room2 , room3,room4 , room5 , room6,room7 , room8));
-        
-        
-        for (int i=0;i<5;i++){
-            for (int j=0;j<10;j++){
-                MeetingTime meetingTime= new MeetingTime(id);
-                meetingTimes.add(meetingTime);
-            }
-        }
-        MeetingTime time1 = new MeetingTime("a1" );
-        MeetingTime time2 = new MeetingTime("a2" );
-        MeetingTime time3 = new MeetingTime("b2");
-        MeetingTime time4 = new MeetingTime("b3" );
-        meetingTimes = new ArrayList <MeetingTime> (Arrays.asList(time1 , time2 , time3 , time4));
+        //System.out.println("Inside Data initilization class");
+       
+        setRooms();
+        setMeetingTimes();
         
         Instructor inst1 = new Instructor("id1", "name1");
         Instructor inst2 = new Instructor("id2", "name2");
@@ -94,6 +75,33 @@ public class Data {
         }
         return this;
     }
+    
+    private void setMeetingTimes(){
+        ArrayList<String> list1= new ArrayList<String>(Arrays.asList("1","2","3","4","5"));
+        ArrayList<String> list2= new ArrayList<String>(Arrays.asList("a","b","c","d","e","f","g","h","i","j"));
+        
+        meetingTimes= new ArrayList<MeetingTime>();
+        for (int i=0;i<5;i++){
+            for (int j=0;j<10;j++){
+                MeetingTime meetingTime= new MeetingTime(list1.get(i)+list2.get(j));
+                System.out.println(meetingTime.getTime());
+                meetingTimes.add(meetingTime);
+            }
+        }
+    }
+    
+    private void setRooms(){
+         Room room1 = new Room("gs1", 100);
+        Room room2 = new Room("gs2", 100);
+        Room room3 = new Room("gs3", 100);
+        Room room4 = new Room("gs4", 100);
+        Room room5 = new Room("gs5", 100);
+        Room room6 = new Room("gs6", 100);
+        Room room7 = new Room("gs7", 100);
+        Room room8 = new Room("gs8", 100);
+        rooms= new ArrayList<Room>(Arrays.asList(room1 , room2 , room3,room4 , room5 , room6,room7 , room8));
+    }
+    
     
     public ArrayList<Room> getRooms(){
         return rooms;

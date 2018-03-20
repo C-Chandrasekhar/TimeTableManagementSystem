@@ -22,8 +22,8 @@ public class MeetingTime {
         return id;
     }
     public String getTime(){
-         String str1=list1.get((int)id.charAt(0)-(int)'a');
-         String str2=list2.get((int)id.charAt(1)-(int)'0');
+         String str1=list1.get((int)id.charAt(0)-(int)'1');
+         String str2=list2.get((int)id.charAt(1)-(int)'a');
          
          return str1+" "+str2;
     }
