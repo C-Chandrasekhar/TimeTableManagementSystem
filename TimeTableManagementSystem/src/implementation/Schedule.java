@@ -27,37 +27,53 @@ public class Schedule {
         return data;
     }
     
-    public Schedule initialise(){
-        ArrayList<Department> dept=new ArrayList<Department> (data.getDepartments());
+   public Schedule initialise(){
+    ArrayList<Department> dept=new ArrayList<Department> (data.getDepartments());
         for (int i=0;i<dept.size();i++){
             ArrayList<Course> course= new ArrayList<Course> (dept.get(i).getCourses());
            
             for (int j=0;j<course.size();j++){
                 //<h1>a loop for number of classes for each course</h1>
-                
-             for (int k=0;k<course.get(j).getNumOfClassesPerWeek();k++){
-                 
-               Class newClass = new Class(classNumber++ , dept.get(i), course.get(j));
-               
-               newClass.setMeetingTime(data.getMeetingTimes().get((int)(data.getMeetingTimes().size() * Math.random())));
-               newClass.setInstructor(data.getInstructors().get((int)(data.getInstructors().size()* Math.random())));
-               
-              instructorsFix=data.getInstructorsFix();
-              for (int ite=0;ite<instructorsFix.size();ite++){
-                  if(instructorsFix.get(ite).getDepartmentFix()== dept.get(i) 
-                          && instructorsFix.get(ite).getCourseFix()== course.get(j) )
-                       newClass.setInstructor(instructorsFix.get(ite).getInstructorFix());
-              }
-              
-
-//               newClass.setInstructor(data.getInstructorsFix(course.get(j), dept.get(i)).get((int)
-//                       (data.getInstructorsFix(course.get(j), dept.get(i)).size()* Math.random())));
-//               
-               
-               newClass.setRoom(data.getRooms().get((int) (data.getRooms().size() * Math.random())));
-               classes.add(newClass);
-               
-             }
+                if(course.get(j).getIsLab()=="no"){
+                    for (int k=0;k<course.get(j).getNumOfClassesPerWeek();k++){
+                        
+                        Class newClass = new Class(classNumber++ , dept.get(i), course.get(j));
+                        newClass.setMeetingTime(data.getMeetingTimes().get((int)(data.getMeetingTimes().size() * Math.random())));
+                        //newClass.setInstructor(data.getInstructors().get((int)(data.getInstructors().size()* Math.random())));
+                        
+                        instructorsFix=data.getInstructorsFix();
+                        for (int ite=0;ite<instructorsFix.size();ite++){
+                            if(instructorsFix.get(ite).getDepartmentFix()== dept.get(i) 
+                                && instructorsFix.get(ite).getCourseFix()== course.get(j) )
+                                newClass.setInstructor(instructorsFix.get(ite).getInstructorFix());
+                        }
+            // newClass.setInstructor(data.getInstructorsFix(course.get(j), dept.get(i)).get((int)
+            //(data.getInstructorsFix(course.get(j), dept.get(i)).size()* Math.random())));
+                        newClass.setRoom(data.getRooms().get((int) (data.getRooms().size() * Math.random())));
+                        classes.add(newClass);
+                    }
+                }
+                else if (course.get(j).getIsLab()=="yes"){
+                     Class newClass1 = new Class(classNumber++ , dept.get(i), course.get(j));
+                     newClass1.setMeetingTime(data.getMeetingTimes().get((int)(data.getMeetingTimes().size() * Math.random())));
+                     
+                     Class newClass2 = new Class(classNumber++ , dept.get(i), course.get(j));
+                     Class newClass3 = new Class(classNumber++ , dept.get(i), course.get(j));
+                     newClass2.setMeetingTime(newClass1.getMeetingTime());
+                     newClass3.setMeetingTime(newClass1.getMeetingTime());
+                     
+                     
+                     instructorsFix=data.getInstructorsFix();
+                        for (int ite=0;ite<instructorsFix.size();ite++){
+                            if(instructorsFix.get(ite).getDepartmentFix()== dept.get(i) 
+                                && instructorsFix.get(ite).getCourseFix()== course.get(j) ){
+                                newClass1.setInstructor(instructorsFix.get(ite).getInstructorFix());
+                                newClass2.setInstructor(instructorsFix.get(ite).getInstructorFix());
+                                newClass3.setInstructor(instructorsFix.get(ite).getInstructorFix());
+                            }
+                        }
+                     
+                }
             }
         }
         return this;

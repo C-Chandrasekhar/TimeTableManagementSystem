@@ -12,11 +12,15 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Data {
+    
     private ArrayList<Room> rooms;
+    private ArrayList<Room> labRooms;
+    
     private ArrayList<Instructor> instructors;
     private ArrayList<Course> courses;
     private ArrayList<Department> departments;
     private ArrayList<MeetingTime> meetingTimes;
+    private ArrayList<MeetingTime> labMeetingTimes;
     private int numberOfClasses=0;
      ///implementing fix instructor
     private ArrayList<InstructorFix> instructorsFix;
@@ -31,7 +35,9 @@ public class Data {
         //System.out.println("Inside Data initilization class");
        
         setRooms();
+        setLabRooms();
         setMeetingTimes();
+        setLabMeetingTimes();
         
         Instructor inst1 = new Instructor("id1", "name1");
         Instructor inst2 = new Instructor("id2", "name2");
@@ -39,13 +45,13 @@ public class Data {
         Instructor inst4 = new Instructor("id4", "name4");
         instructors = new ArrayList<Instructor> (Arrays.asList(inst1 , inst2, inst3, inst4));
         
-        Course course1= new Course("cname1" , "cid1" , new ArrayList<Instructor> (Arrays.asList(inst1 , inst2)), 3);
-        Course course7= new Course("cname1" , "cid1" , new ArrayList<Instructor> (Arrays.asList(inst1 , inst2)),3);
-        Course course2= new Course("cname2" , "cid2" , new ArrayList<Instructor> (Arrays.asList(inst1 , inst3)), 3);
-        Course course3= new Course("cname3" , "cid3" , new ArrayList<Instructor> (Arrays.asList(inst2, inst4)), 3);
-        Course course4= new Course("cname4" , "cid4" , new ArrayList<Instructor> (Arrays.asList(inst1)), 3);
-        Course course5= new Course("cname5" , "cid5" , new ArrayList<Instructor> (Arrays.asList(inst3 , inst2)), 3);
-        Course course6= new Course("cname6" , "cid6" , new ArrayList<Instructor> (Arrays.asList(inst1 , inst4)), 3);
+        Course course1= new Course("cname1" , "cid1" , new ArrayList<Instructor> (Arrays.asList(inst1 , inst2)), 4,"no");
+        Course course7= new Course("cname1" , "cid1" , new ArrayList<Instructor> (Arrays.asList(inst1 , inst2)),3 ,"no");
+        Course course2= new Course("cname2" , "cid2" , new ArrayList<Instructor> (Arrays.asList(inst1 , inst3)), 3, "no");
+        Course course3= new Course("cname3" , "cid3" , new ArrayList<Instructor> (Arrays.asList(inst2, inst4)), 3, "no");
+        Course course4= new Course("cname4" , "cid4" , new ArrayList<Instructor> (Arrays.asList(inst1)), 3, "no");
+        Course course5= new Course("cname5" , "cid5" , new ArrayList<Instructor> (Arrays.asList(inst3 , inst2)), 4, "no");
+        Course course6= new Course("cname6" , "cid6" , new ArrayList<Instructor> (Arrays.asList(inst1 , inst4)), 3, "no");
         courses = new ArrayList<Course>(Arrays.asList(course1 , course2, course3, course4, course5, course6, course7));
         
         Department dept1= new Department("CSE",55 , new ArrayList<Course> (Arrays.asList(course1 , course2 , course4, course7)));
@@ -90,6 +96,20 @@ public class Data {
         }
     }
     
+    private void setLabMeetingTimes(){
+        ArrayList<String> list1= new ArrayList<String>(Arrays.asList("1","2","3","4","5"));
+        ArrayList<String> list2= new ArrayList<String>(Arrays.asList("a","b","c","g","h"));
+        
+        labMeetingTimes= new ArrayList<MeetingTime>();
+        for (int i=0;i<5;i++){
+            for (int j=0;j<5;j++){
+                MeetingTime meetingTime= new MeetingTime(list1.get(i)+list2.get(j));
+                System.out.println(meetingTime.getTime());
+                labMeetingTimes.add(meetingTime);
+            }
+        }
+    }
+    
     private void setRooms(){
          Room room1 = new Room("gs1", 100);
         Room room2 = new Room("gs2", 100);
@@ -101,10 +121,18 @@ public class Data {
         Room room8 = new Room("gs8", 100);
         rooms= new ArrayList<Room>(Arrays.asList(room1 , room2 , room3,room4 , room5 , room6,room7 , room8));
     }
-    
+    private void setLabRooms(){
+        Room room1= new Room("UG lab", 110);
+        Room room2= new Room("PG lab", 110);
+        Room room3= new Room("Networks lab", 110);
+        labRooms= new ArrayList<Room>(Arrays.asList(room1, room2 , room3));
+    }
     
     public ArrayList<Room> getRooms(){
         return rooms;
+    }
+    public ArrayList<Room> getLabRooms(){
+        return labRooms;
     }
     public ArrayList<Instructor> getInstructors(){
         return instructors;
@@ -124,6 +152,9 @@ public class Data {
     }
     public ArrayList<MeetingTime> getMeetingTimes(){
         return meetingTimes;
+    }
+    public ArrayList<MeetingTime> getLabMeetingTimes(){
+        return labMeetingTimes;
     }
     public int getNumberOfClasses(){
         return numberOfClasses;

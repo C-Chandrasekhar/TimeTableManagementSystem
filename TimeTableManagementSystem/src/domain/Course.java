@@ -9,14 +9,19 @@ public class Course {
     private String id;
     private ArrayList<Instructor> instructors;
     private int numOfClassesPerWeek;
+    private String isLab;
     
-    public Course (String name , String id , ArrayList<Instructor> ins , int numOfClassesPerWeek){
+    public Course (String name , String id , ArrayList<Instructor> ins , int numOfClassesPerWeek, String isLab){
         this.name=name;
         this.id=id;
         this.instructors=ins;
         this.numOfClassesPerWeek=numOfClassesPerWeek;
+        this.isLab=isLab;
     }
     
+    public String getIsLab(){
+        return isLab;
+    }
     public String getId(){
         return id;
     }
