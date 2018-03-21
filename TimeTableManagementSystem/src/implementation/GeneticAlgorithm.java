@@ -64,7 +64,7 @@ public class GeneticAlgorithm {
         for (int i=0; i<mutateSchedule.getClasses().size(); i++){
             if(Driver.MUTATION_RATE > Math.random())
                 mutateSchedule.getClasses().set(i, schedule.getClasses().get(i));
-        }
+        } 
         return mutateSchedule;
     }
     

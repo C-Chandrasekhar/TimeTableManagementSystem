@@ -23,11 +23,10 @@ public class Driver {
         
         Driver driver= new Driver();
         driver.data=new Data();
-        driver.printAvailableData();
+        //driver.printAvailableData();
         
         GeneticAlgorithm geneticAlgorithm = new GeneticAlgorithm(driver.data);
         Population population = new Population(Driver.POPULATION_SIZE, driver.data).sortByFitness();
-        
         
         int t=0;
         while(population.getSchedules().get(0).getFitness()!=1.0){

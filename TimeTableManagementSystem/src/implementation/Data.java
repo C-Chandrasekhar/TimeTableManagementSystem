@@ -51,7 +51,7 @@ public class Data {
         Course course3= new Course("cname3" , "cid3" , new ArrayList<Instructor> (Arrays.asList(inst2, inst4)), 3, "no");
         Course course4= new Course("cname4" , "cid4" , new ArrayList<Instructor> (Arrays.asList(inst1)), 3, "no");
         Course course5= new Course("cname5" , "cid5" , new ArrayList<Instructor> (Arrays.asList(inst3 , inst2)), 4, "no");
-        Course course6= new Course("cname6" , "cid6" , new ArrayList<Instructor> (Arrays.asList(inst1 , inst4)), 3, "no");
+        Course course6= new Course("cname6" , "cid6" , new ArrayList<Instructor> (Arrays.asList(inst1 , inst4)), 3, "yes");
         courses = new ArrayList<Course>(Arrays.asList(course1 , course2, course3, course4, course5, course6, course7));
         
         Department dept1= new Department("CSE",55 , new ArrayList<Course> (Arrays.asList(course1 , course2 , course4, course7)));
@@ -90,7 +90,6 @@ public class Data {
         for (int i=0;i<5;i++){
             for (int j=0;j<10;j++){
                 MeetingTime meetingTime= new MeetingTime(list1.get(i)+list2.get(j));
-                System.out.println(meetingTime.getTime());
                 meetingTimes.add(meetingTime);
             }
         }
@@ -104,7 +103,6 @@ public class Data {
         for (int i=0;i<5;i++){
             for (int j=0;j<5;j++){
                 MeetingTime meetingTime= new MeetingTime(list1.get(i)+list2.get(j));
-                System.out.println(meetingTime.getTime());
                 labMeetingTimes.add(meetingTime);
             }
         }
