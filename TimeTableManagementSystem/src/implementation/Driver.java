@@ -44,12 +44,12 @@ public class Driver {
                         String.format("%.5f", x.getFitness()) +"  |  " +x.getNumberOfConflicts())
         );*/
         System.out.println("while loop runned for "+t);
-        try{
+        //try{
         driver.printTimeTable(population.getSchedules().get(0));
     
-        }catch(Exception e){
-            System.out.println(e);
-        }
+        //}catch(Exception e){
+        //    System.out.println(e);
+        //}
     }
     
     private void printTimeTable(Schedule schedule){
