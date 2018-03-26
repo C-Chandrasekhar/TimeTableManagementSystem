@@ -7,11 +7,11 @@
 2.take number of classes of each course                             --- done :-)
 
 3.implementing labs 
-    three hours should be adjacent
+    three hours should be adjacent                                  --- done -_-
     
-5. create UI
+5. create UI                                 
 
-6. create database which would easy to implement all below queries
+6. create database which would easy to implement all below queries    
     A. able to add lectures , classrooms , studentGrps etc.
     B. retrieving all data 
         1. all classes foa a particular studentGrp

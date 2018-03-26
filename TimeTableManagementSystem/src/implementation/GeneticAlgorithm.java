@@ -6,13 +6,14 @@
 package implementation;
 
 import java.util.ArrayList;
-
+import domain.Class;
 /**
  *
  * @author chandrasekhar ch
  */
 public class GeneticAlgorithm {
     private Data data;
+   
     
     public GeneticAlgorithm(Data data){
         this.data=data;
@@ -41,10 +42,17 @@ public class GeneticAlgorithm {
     Schedule crossoverSchedule (Schedule schedule1 , Schedule schedule2){
         Schedule crossoverSchedule = new Schedule(data).initialise();
         for (int i=0;i<crossoverSchedule.getClasses().size();i++){
-            if(Math.random() > 0.5)
-                crossoverSchedule.getClasses().set(i, schedule1.getClasses().get(i));
-            else
-                crossoverSchedule.getClasses().set(i, schedule2.getClasses().get(i));
+            if(Math.random() > 0.5){
+                
+                Class temClass = crossoverSchedule.getClasses().get(i);
+                if(temClass.getCourse().getIsLab().equals("no"))
+                    crossoverSchedule.getClasses().set(i, schedule1.getClasses().get(i));
+            }
+            else{
+                Class temClass = crossoverSchedule.getClasses().get(i);
+                if(temClass.getCourse().getIsLab().equals("no"))
+                    crossoverSchedule.getClasses().set(i, schedule2.getClasses().get(i));
+            }
         }
         return crossoverSchedule;
     }
@@ -62,8 +70,11 @@ public class GeneticAlgorithm {
     Schedule mutateSchedule (Schedule mutateSchedule){
         Schedule schedule=new Schedule(data).initialise();
         for (int i=0; i<mutateSchedule.getClasses().size(); i++){
-            if(Driver.MUTATION_RATE > Math.random())
-                mutateSchedule.getClasses().set(i, schedule.getClasses().get(i));
+            if(Driver.MUTATION_RATE > Math.random()){
+                Class temClass = mutateSchedule.getClasses().get(i);
+                if(temClass.getCourse().getIsLab().equals("no"))
+                 mutateSchedule.getClasses().set(i, schedule.getClasses().get(i));
+            }
         } 
         return mutateSchedule;
     }

@@ -35,7 +35,7 @@ public class Schedule {
            
             for (int j=0;j<course.size();j++){
                 //<h1>a loop for number of classes for each course</h1>
-                if(course.get(j).getIsLab()=="no"){
+                if(course.get(j).getIsLab().equals("no")){
                     
                     for (int k=0;k<course.get(j).getNumOfClassesPerWeek();k++){
                         
@@ -56,21 +56,21 @@ public class Schedule {
                     }
                     
                 }
-                else if (course.get(j).getIsLab()=="yes"){
+                else if (course.get(j).getIsLab().equals("yes")){
                      Class newClass1 = new Class(classNumber++ , dept.get(i), course.get(j));
-                     newClass1.setMeetingTime(data.getMeetingTimes().get((int)(data.getMeetingTimes().size() * Math.random())));
+                     newClass1.setMeetingTime(data.getLabMeetingTimes().get((int)(data.getLabMeetingTimes().size() * Math.random())));
                      
                      Class newClass2 = new Class(classNumber++ , dept.get(i), course.get(j));
                      
                      String time=newClass1.getMeetingTime().getId();
                      String newTime=time.substring(0, 1)+(char)((int)time.charAt(1)+1);
+                    // System.out.println(newTime.charAt(1)-time.charAt(1));
                      MeetingTime newMeetingTime= new MeetingTime(newTime);
                      newClass2.setMeetingTime(newMeetingTime);
                      
                      Class newClass3 = new Class(classNumber++ , dept.get(i), course.get(j));
-                     String time1=newClass2.getMeetingTime().getId();
-                     String newTime1=time.substring(0, 1)+(char)((int)time.charAt(1)+1);
-                     MeetingTime newMeetingTime1= new MeetingTime(newTime);
+                     String newTime1=newTime.substring(0, 1)+(char)((int)newTime.charAt(1)+1);
+                     MeetingTime newMeetingTime1= new MeetingTime(newTime1);
                      newClass3.setMeetingTime(newMeetingTime1);
                      
                      
@@ -81,6 +81,7 @@ public class Schedule {
                                 newClass1.setInstructor(instructorsFix.get(ite).getInstructorFix());
                                 newClass2.setInstructor(instructorsFix.get(ite).getInstructorFix());
                                 newClass3.setInstructor(instructorsFix.get(ite).getInstructorFix());
+                                break;
                             }
                         }
                         

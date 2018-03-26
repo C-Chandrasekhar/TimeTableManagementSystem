@@ -44,13 +44,17 @@ public class Driver {
                         String.format("%.5f", x.getFitness()) +"  |  " +x.getNumberOfConflicts())
         );*/
         System.out.println("while loop runned for "+t);
+        try{
         driver.printTimeTable(population.getSchedules().get(0));
+    
+        }catch(Exception e){
+            System.out.println(e);
+        }
     }
     
     private void printTimeTable(Schedule schedule){
-        int n=schedule.getClasses().size();
         
-        for (int i=0;i<n;i++){
+        for (int i=0;i<schedule.getClasses().size();i++){
             System.out.print(schedule.getClasses().get(i).getId() + "  |  ");
             System.out.print(schedule.getClasses().get(i).getDepartment().getName()+ "  |  ");
             System.out.print(schedule.getClasses().get(i).getCourse().getName()+"   |  ");

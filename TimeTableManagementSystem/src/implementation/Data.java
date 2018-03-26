@@ -46,17 +46,18 @@ public class Data {
         instructors = new ArrayList<Instructor> (Arrays.asList(inst1 , inst2, inst3, inst4));
         
         Course course1= new Course("cname1" , "cid1" , new ArrayList<Instructor> (Arrays.asList(inst1 , inst2)), 4,"no");
-        Course course7= new Course("cname1" , "cid1" , new ArrayList<Instructor> (Arrays.asList(inst1 , inst2)),3 ,"no");
         Course course2= new Course("cname2" , "cid2" , new ArrayList<Instructor> (Arrays.asList(inst1 , inst3)), 3, "no");
         Course course3= new Course("cname3" , "cid3" , new ArrayList<Instructor> (Arrays.asList(inst2, inst4)), 3, "no");
         Course course4= new Course("cname4" , "cid4" , new ArrayList<Instructor> (Arrays.asList(inst1)), 3, "no");
         Course course5= new Course("cname5" , "cid5" , new ArrayList<Instructor> (Arrays.asList(inst3 , inst2)), 4, "no");
         Course course6= new Course("cname6" , "cid6" , new ArrayList<Instructor> (Arrays.asList(inst1 , inst4)), 3, "yes");
+        Course course7= new Course("cname7" , "cid7" , new ArrayList<Instructor> (Arrays.asList(inst1 , inst2)),3 ,"no");
+
         courses = new ArrayList<Course>(Arrays.asList(course1 , course2, course3, course4, course5, course6, course7));
         
         Department dept1= new Department("CSE",55 , new ArrayList<Course> (Arrays.asList(course1 , course2 , course4, course7)));
         Department dept2= new Department("IT",65 , new ArrayList<Course> (Arrays.asList(course3 , course4, course5)));
-        Department dept3= new Department("cse",45 , new ArrayList<Course> (Arrays.asList(course1 ,course2,course6, course7)));
+        Department dept3= new Department("ECE",45 , new ArrayList<Course> (Arrays.asList(course1 ,course2,course6, course7)));
         departments = new ArrayList<Department> (Arrays.asList(dept1, dept2, dept3));
         
         InstructorFix instFix1 = new InstructorFix(dept1, course1,inst1);
