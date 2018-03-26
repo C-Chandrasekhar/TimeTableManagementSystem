@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package implementation;
-
+import domain.Instructor;
 /**
  *
  * @author chandrasekhar ch
@@ -58,10 +58,13 @@ public class Driver {
             System.out.print(schedule.getClasses().get(i).getId() + "  |  ");
             System.out.print(schedule.getClasses().get(i).getDepartment().getName()+ "  |  ");
             System.out.print(schedule.getClasses().get(i).getCourse().getName()+"   |  ");
+           // Instructor ins= schedule.getClasses().get(i).getInstructor();
+            //System.out.print(ins+"  ");
             System.out.print(schedule.getClasses().get(i).getInstructor().getName()+"  |   ");
             System.out.print(schedule.getClasses().get(i).getRoom().getId()+ "   |  ");
             System.out.println(schedule.getClasses().get(i).getMeetingTime().getTime());
         }
+        
     }
     
     private void printAvailableData(){

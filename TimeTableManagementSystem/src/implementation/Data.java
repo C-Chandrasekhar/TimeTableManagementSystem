@@ -52,7 +52,7 @@ public class Data {
         Course course5= new Course("cname5" , "cid5" , new ArrayList<Instructor> (Arrays.asList(inst3 , inst2)), 4, "no");
         Course course6= new Course("cname6" , "cid6" , new ArrayList<Instructor> (Arrays.asList(inst1 , inst4)), 3, "yes");
         Course course7= new Course("cname7" , "cid7" , new ArrayList<Instructor> (Arrays.asList(inst1 , inst2)),3 ,"no");
-
+        
         courses = new ArrayList<Course>(Arrays.asList(course1 , course2, course3, course4, course5, course6, course7));
         
         Department dept1= new Department("CSE",55 , new ArrayList<Course> (Arrays.asList(course1 , course2 , course4, course7)));
@@ -69,7 +69,7 @@ public class Data {
         InstructorFix instFix6 = new InstructorFix(dept2, course4,inst1);
         InstructorFix instFix7 = new InstructorFix(dept2, course5,inst3);
        
-        InstructorFix instFix9  = new InstructorFix(dept2, course7,inst2);
+        InstructorFix instFix9  = new InstructorFix(dept3, course7,inst2);
         InstructorFix instFix10 = new InstructorFix(dept3, course2,inst3);
         InstructorFix instFix11 = new InstructorFix(dept3, course6,inst1);
         InstructorFix instFix12 = new InstructorFix(dept3, course1,inst2);
