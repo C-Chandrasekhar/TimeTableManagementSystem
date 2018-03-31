@@ -46,6 +46,7 @@ public class Driver {
         System.out.println("while loop runned for "+t);
         //try{
         driver.printTimeTable(population.getSchedules().get(0));
+         driver.printTimeTable(population.getSchedules().get(1));
     
         //}catch(Exception e){
         //    System.out.println(e);
@@ -62,9 +63,12 @@ public class Driver {
             //System.out.print(ins+"  ");
             System.out.print(schedule.getClasses().get(i).getInstructor().getName()+"  |   ");
             System.out.print(schedule.getClasses().get(i).getRoom().getId()+ "   |  ");
-            System.out.println(schedule.getClasses().get(i).getMeetingTime().getTime());
+            System.out.print(schedule.getClasses().get(i).getMeetingTime().getTime());
+            System.out.println("  collisions "+schedule.getNumberOfConflicts());
+            
+            
         }
-        
+        System.out.println("============================================================");
     }
     
     private void printAvailableData(){
