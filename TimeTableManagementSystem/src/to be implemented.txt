@@ -17,8 +17,3 @@
         1. all classes foa a particular studentGrp
         2. all classes for a lecturer
         3. all the free classrooms in a particular time
-
-       
-
-
-
