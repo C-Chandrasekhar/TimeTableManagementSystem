@@ -4,10 +4,8 @@
  * and open the template in the editor.
  */
 
-/**
- *
- * @author Amrutha
- */
+package UserInterface;
+
 public class timetable extends javax.swing.JFrame {
 
     /**
@@ -28,6 +26,114 @@ public class timetable extends javax.swing.JFrame {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        jLabel48 = new javax.swing.JLabel();
+        jLabel57 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel34 = new javax.swing.JLabel();
+        jLabel35 = new javax.swing.JLabel();
+        jLabel36 = new javax.swing.JLabel();
+        jLabel37 = new javax.swing.JLabel();
+        jLabel38 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
+        jLabel41 = new javax.swing.JLabel();
+        jLabel42 = new javax.swing.JLabel();
+        jLabel43 = new javax.swing.JLabel();
+        jLabel44 = new javax.swing.JLabel();
+        jLabel55 = new javax.swing.JLabel();
+        jLabel50 = new javax.swing.JLabel();
+        jLabel51 = new javax.swing.JLabel();
+        jLabel52 = new javax.swing.JLabel();
+        b2 = new javax.swing.JLabel();
+        jLabel54 = new javax.swing.JLabel();
+        jLabel65 = new javax.swing.JLabel();
+        jLabel66 = new javax.swing.JLabel();
+        jLabel67 = new javax.swing.JLabel();
+        jLabel68 = new javax.swing.JLabel();
+        jLabel69 = new javax.swing.JLabel();
+        jLabel70 = new javax.swing.JLabel();
+        jLabel71 = new javax.swing.JLabel();
+        jLabel72 = new javax.swing.JLabel();
+        jLabel73 = new javax.swing.JLabel();
+        jLabel74 = new javax.swing.JLabel();
+        a3 = new javax.swing.JLabel();
+        e3 = new javax.swing.JLabel();
+        a5 = new javax.swing.JLabel();
+        b1 = new javax.swing.JLabel();
+        c1 = new javax.swing.JLabel();
+        d1 = new javax.swing.JLabel();
+        e1 = new javax.swing.JLabel();
+        f1 = new javax.swing.JLabel();
+        g1 = new javax.swing.JLabel();
+        h1 = new javax.swing.JLabel();
+        i1 = new javax.swing.JLabel();
+        j1 = new javax.swing.JLabel();
+        a1 = new javax.swing.JLabel();
+        c2 = new javax.swing.JLabel();
+        d2 = new javax.swing.JLabel();
+        e2 = new javax.swing.JLabel();
+        f2 = new javax.swing.JLabel();
+        g2 = new javax.swing.JLabel();
+        h2 = new javax.swing.JLabel();
+        i2 = new javax.swing.JLabel();
+        j2 = new javax.swing.JLabel();
+        b3 = new javax.swing.JLabel();
+        c3 = new javax.swing.JLabel();
+        d3 = new javax.swing.JLabel();
+        a2 = new javax.swing.JLabel();
+        f3 = new javax.swing.JLabel();
+        g3 = new javax.swing.JLabel();
+        h3 = new javax.swing.JLabel();
+        i3 = new javax.swing.JLabel();
+        j3 = new javax.swing.JLabel();
+        b4 = new javax.swing.JLabel();
+        c4 = new javax.swing.JLabel();
+        d4 = new javax.swing.JLabel();
+        e4 = new javax.swing.JLabel();
+        f4 = new javax.swing.JLabel();
+        h4 = new javax.swing.JLabel();
+        a4 = new javax.swing.JLabel();
+        i4 = new javax.swing.JLabel();
+        j4 = new javax.swing.JLabel();
+        b5 = new javax.swing.JLabel();
+        c5 = new javax.swing.JLabel();
+        d5 = new javax.swing.JLabel();
+        f5 = new javax.swing.JLabel();
+        g4 = new javax.swing.JLabel();
+        g5 = new javax.swing.JLabel();
+        h5 = new javax.swing.JLabel();
+        i5 = new javax.swing.JLabel();
+        j5 = new javax.swing.JLabel();
+        e5 = new javax.swing.JLabel();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -42,18 +148,596 @@ public class timetable extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
+        jLabel48.setText("jLabel48");
+
+        jLabel57.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel57.setText("    8-9");
+        jLabel57.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel9.setFont(new java.awt.Font("Arial", 1, 48)); // NOI18N
+        jLabel9.setText("MNNIT ALLAHABAD");
+
+        jLabel10.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        jLabel10.setText("TIME TABLE MANAGER");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel1.setLayout(null);
+
+        jLabel4.setFont(new java.awt.Font("Arial", 1, 50)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 51));
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(250, 10, 0, 0);
+
+        jLabel2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel2.setText("    TUESDAY");
+        jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(10, 260, 130, 60);
+
+        jPanel2.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel2.setLayout(null);
+
+        jLabel12.setFont(new java.awt.Font("Arial", 1, 50)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(0, 0, 51));
+        jPanel2.add(jLabel12);
+        jLabel12.setBounds(70, 10, 0, 0);
+
+        jLabel13.setFont(new java.awt.Font("Arial", 1, 48)); // NOI18N
+        jLabel13.setText("MNNIT ALLAHABAD");
+        jPanel2.add(jLabel13);
+        jLabel13.setBounds(210, 10, 462, 56);
+
+        jLabel14.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        jLabel14.setText("TIME TABLE MANAGER");
+        jPanel2.add(jLabel14);
+        jLabel14.setBounds(250, 70, 408, 43);
+
+        jLabel15.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel15.setText("   10-11");
+        jLabel15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel2.add(jLabel15);
+        jLabel15.setBounds(280, 170, 70, 30);
+
+        jLabel16.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel16.setText("    8-9");
+        jLabel16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel2.add(jLabel16);
+        jLabel16.setBounds(140, 170, 70, 30);
+
+        jLabel17.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel17.setText("    8-9");
+        jLabel17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel2.add(jLabel17);
+        jLabel17.setBounds(140, 170, 70, 30);
+
+        jLabel18.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel18.setText("   12-1");
+        jLabel18.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel2.add(jLabel18);
+        jLabel18.setBounds(420, 170, 70, 30);
+
+        jLabel19.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel19.setText("   9-10");
+        jLabel19.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel2.add(jLabel19);
+        jLabel19.setBounds(210, 170, 70, 30);
+
+        jLabel20.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel20.setText("    1-2");
+        jLabel20.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel2.add(jLabel20);
+        jLabel20.setBounds(490, 170, 70, 30);
+
+        jLabel21.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel21.setText("    2-3");
+        jLabel21.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel2.add(jLabel21);
+        jLabel21.setBounds(560, 170, 70, 30);
+
+        jLabel22.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel22.setText("  11-12");
+        jLabel22.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel2.add(jLabel22);
+        jLabel22.setBounds(350, 170, 70, 30);
+
+        jPanel3.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel3.setLayout(null);
+
+        jLabel23.setFont(new java.awt.Font("Arial", 1, 50)); // NOI18N
+        jLabel23.setForeground(new java.awt.Color(0, 0, 51));
+        jPanel3.add(jLabel23);
+        jLabel23.setBounds(70, 10, 0, 0);
+
+        jLabel24.setFont(new java.awt.Font("Arial", 1, 48)); // NOI18N
+        jLabel24.setText("MNNIT ALLAHABAD");
+        jPanel3.add(jLabel24);
+        jLabel24.setBounds(210, 10, 462, 56);
+
+        jLabel25.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        jLabel25.setText("TIME TABLE MANAGER");
+        jPanel3.add(jLabel25);
+        jLabel25.setBounds(250, 70, 408, 43);
+
+        jLabel26.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel26.setText("   10-11");
+        jLabel26.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel3.add(jLabel26);
+        jLabel26.setBounds(280, 170, 70, 30);
+
+        jLabel27.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel27.setText("    8-9");
+        jLabel27.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel3.add(jLabel27);
+        jLabel27.setBounds(140, 170, 70, 30);
+
+        jLabel28.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel28.setText("    8-9");
+        jLabel28.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel3.add(jLabel28);
+        jLabel28.setBounds(140, 170, 70, 30);
+
+        jLabel29.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel29.setText("   12-1");
+        jLabel29.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel3.add(jLabel29);
+        jLabel29.setBounds(420, 170, 70, 30);
+
+        jLabel30.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel30.setText("   9-10");
+        jLabel30.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel3.add(jLabel30);
+        jLabel30.setBounds(210, 170, 70, 30);
+
+        jLabel31.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel31.setText("    1-2");
+        jLabel31.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel3.add(jLabel31);
+        jLabel31.setBounds(490, 170, 70, 30);
+
+        jLabel32.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel32.setText("    2-3");
+        jLabel32.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel3.add(jLabel32);
+        jLabel32.setBounds(560, 170, 70, 30);
+
+        jLabel33.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel33.setText("  11-12");
+        jLabel33.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel3.add(jLabel33);
+        jLabel33.setBounds(350, 170, 70, 30);
+
+        jPanel4.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel4.setLayout(null);
+
+        jLabel34.setFont(new java.awt.Font("Arial", 1, 50)); // NOI18N
+        jLabel34.setForeground(new java.awt.Color(0, 0, 51));
+        jPanel4.add(jLabel34);
+        jLabel34.setBounds(70, 10, 0, 0);
+
+        jLabel35.setFont(new java.awt.Font("Arial", 1, 48)); // NOI18N
+        jLabel35.setText("MNNIT ALLAHABAD");
+        jPanel4.add(jLabel35);
+        jLabel35.setBounds(210, 10, 462, 56);
+
+        jLabel36.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        jLabel36.setText("TIME TABLE MANAGER");
+        jPanel4.add(jLabel36);
+        jLabel36.setBounds(250, 70, 408, 43);
+
+        jLabel37.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel37.setText("   10-11");
+        jLabel37.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel4.add(jLabel37);
+        jLabel37.setBounds(280, 170, 70, 30);
+
+        jLabel38.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel38.setText("    8-9");
+        jLabel38.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel4.add(jLabel38);
+        jLabel38.setBounds(140, 170, 70, 30);
+
+        jLabel39.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel39.setText("    8-9");
+        jLabel39.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel4.add(jLabel39);
+        jLabel39.setBounds(140, 170, 70, 30);
+
+        jLabel40.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel40.setText("   12-1");
+        jLabel40.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel4.add(jLabel40);
+        jLabel40.setBounds(420, 170, 70, 30);
+
+        jLabel41.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel41.setText("   9-10");
+        jLabel41.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel4.add(jLabel41);
+        jLabel41.setBounds(210, 170, 70, 30);
+
+        jLabel42.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel42.setText("    1-2");
+        jLabel42.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel4.add(jLabel42);
+        jLabel42.setBounds(490, 170, 70, 30);
+
+        jLabel43.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel43.setText("    2-3");
+        jLabel43.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel4.add(jLabel43);
+        jLabel43.setBounds(560, 170, 70, 30);
+
+        jLabel44.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel44.setText("  11-12");
+        jLabel44.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel4.add(jLabel44);
+        jLabel44.setBounds(350, 170, 70, 30);
+
+        jPanel3.add(jPanel4);
+        jPanel4.setBounds(0, 0, 0, 0);
+
+        jPanel2.add(jPanel3);
+        jPanel3.setBounds(0, 0, 0, 0);
+
+        jPanel1.add(jPanel2);
+        jPanel2.setBounds(0, 0, 0, 0);
+
+        jLabel55.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel55.setText("       DAYS");
+        jLabel55.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(jLabel55);
+        jLabel55.setBounds(10, 160, 130, 40);
+
+        jLabel50.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel50.setText(" WEDNESDAY");
+        jLabel50.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(jLabel50);
+        jLabel50.setBounds(10, 320, 130, 60);
+
+        jLabel51.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel51.setText("   THURSDAY");
+        jLabel51.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(jLabel51);
+        jLabel51.setBounds(10, 380, 130, 60);
+
+        jLabel52.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel52.setText("      FRIDAY");
+        jLabel52.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(jLabel52);
+        jLabel52.setBounds(10, 440, 130, 60);
+
+        b2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        b2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(b2);
+        b2.setBounds(240, 260, 100, 60);
+
+        jLabel54.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel54.setText("     MONDAY");
+        jLabel54.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(jLabel54);
+        jLabel54.setBounds(10, 200, 130, 60);
+
+        jLabel65.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel65.setText("      9-10");
+        jLabel65.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(jLabel65);
+        jLabel65.setBounds(240, 160, 100, 40);
+
+        jLabel66.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel66.setText("     10-11");
+        jLabel66.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(jLabel66);
+        jLabel66.setBounds(340, 160, 100, 40);
+
+        jLabel67.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel67.setText("     11-12");
+        jLabel67.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(jLabel67);
+        jLabel67.setBounds(440, 160, 100, 40);
+
+        jLabel68.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel68.setText("      12-1");
+        jLabel68.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(jLabel68);
+        jLabel68.setBounds(540, 160, 100, 40);
+
+        jLabel69.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel69.setText("       1-2");
+        jLabel69.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(jLabel69);
+        jLabel69.setBounds(640, 160, 100, 40);
+
+        jLabel70.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel70.setText("       2-3");
+        jLabel70.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(jLabel70);
+        jLabel70.setBounds(740, 160, 100, 40);
+
+        jLabel71.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel71.setText("       3-4");
+        jLabel71.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(jLabel71);
+        jLabel71.setBounds(840, 160, 100, 40);
+
+        jLabel72.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel72.setText("       5-6");
+        jLabel72.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(jLabel72);
+        jLabel72.setBounds(1040, 160, 100, 40);
+
+        jLabel73.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel73.setText("       8-9");
+        jLabel73.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(jLabel73);
+        jLabel73.setBounds(140, 160, 100, 40);
+
+        jLabel74.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel74.setText("       4-5");
+        jLabel74.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(jLabel74);
+        jLabel74.setBounds(940, 160, 100, 40);
+
+        a3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        a3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(a3);
+        a3.setBounds(140, 320, 100, 60);
+
+        e3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        e3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(e3);
+        e3.setBounds(540, 320, 100, 60);
+
+        a5.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        a5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(a5);
+        a5.setBounds(140, 440, 100, 60);
+
+        b1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        b1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(b1);
+        b1.setBounds(240, 200, 100, 60);
+
+        c1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        c1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(c1);
+        c1.setBounds(340, 200, 100, 60);
+
+        d1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        d1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(d1);
+        d1.setBounds(440, 200, 100, 60);
+
+        e1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        e1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(e1);
+        e1.setBounds(540, 200, 100, 60);
+
+        f1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        f1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(f1);
+        f1.setBounds(640, 200, 100, 60);
+
+        g1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        g1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(g1);
+        g1.setBounds(740, 200, 100, 60);
+
+        h1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        h1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(h1);
+        h1.setBounds(840, 200, 100, 60);
+
+        i1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        i1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(i1);
+        i1.setBounds(940, 200, 100, 60);
+
+        j1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        j1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(j1);
+        j1.setBounds(1040, 200, 100, 60);
+
+        a1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        a1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(a1);
+        a1.setBounds(140, 200, 100, 60);
+
+        c2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        c2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(c2);
+        c2.setBounds(340, 260, 100, 60);
+
+        d2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        d2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(d2);
+        d2.setBounds(440, 260, 100, 60);
+
+        e2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        e2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(e2);
+        e2.setBounds(540, 260, 100, 60);
+
+        f2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        f2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(f2);
+        f2.setBounds(640, 260, 100, 60);
+
+        g2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        g2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(g2);
+        g2.setBounds(740, 260, 100, 60);
+
+        h2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        h2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(h2);
+        h2.setBounds(840, 260, 100, 60);
+
+        i2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        i2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(i2);
+        i2.setBounds(940, 260, 100, 60);
+
+        j2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        j2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(j2);
+        j2.setBounds(1040, 260, 100, 60);
+
+        b3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        b3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(b3);
+        b3.setBounds(240, 320, 100, 60);
+
+        c3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        c3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(c3);
+        c3.setBounds(340, 320, 100, 60);
+
+        d3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        d3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(d3);
+        d3.setBounds(440, 320, 100, 60);
+
+        a2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        a2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(a2);
+        a2.setBounds(140, 260, 100, 60);
+
+        f3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        f3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(f3);
+        f3.setBounds(640, 320, 100, 60);
+
+        g3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        g3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(g3);
+        g3.setBounds(740, 320, 100, 60);
+
+        h3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        h3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(h3);
+        h3.setBounds(840, 320, 100, 60);
+
+        i3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        i3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(i3);
+        i3.setBounds(940, 320, 100, 60);
+
+        j3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        j3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(j3);
+        j3.setBounds(1040, 320, 100, 60);
+
+        b4.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        b4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(b4);
+        b4.setBounds(240, 380, 100, 60);
+
+        c4.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        c4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(c4);
+        c4.setBounds(340, 380, 100, 60);
+
+        d4.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        d4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(d4);
+        d4.setBounds(440, 380, 100, 60);
+
+        e4.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        e4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(e4);
+        e4.setBounds(540, 380, 100, 60);
+
+        f4.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        f4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(f4);
+        f4.setBounds(640, 380, 100, 60);
+
+        h4.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        h4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(h4);
+        h4.setBounds(840, 380, 100, 60);
+
+        a4.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        a4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(a4);
+        a4.setBounds(140, 380, 100, 60);
+
+        i4.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        i4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(i4);
+        i4.setBounds(940, 380, 100, 60);
+
+        j4.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        j4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(j4);
+        j4.setBounds(1040, 380, 100, 60);
+
+        b5.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        b5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(b5);
+        b5.setBounds(240, 440, 100, 60);
+
+        c5.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        c5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(c5);
+        c5.setBounds(340, 440, 100, 60);
+
+        d5.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        d5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(d5);
+        d5.setBounds(440, 440, 100, 60);
+
+        f5.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        f5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(f5);
+        f5.setBounds(640, 440, 100, 60);
+
+        g4.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        g4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(g4);
+        g4.setBounds(740, 380, 100, 60);
+
+        g5.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        g5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(g5);
+        g5.setBounds(740, 440, 100, 60);
+
+        h5.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        h5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(h5);
+        h5.setBounds(840, 440, 100, 60);
+
+        i5.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        i5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(i5);
+        i5.setBounds(940, 440, 100, 60);
+
+        j5.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        j5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(j5);
+        j5.setBounds(1040, 440, 100, 60);
+
+        e5.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        e5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(e5);
+        e5.setBounds(540, 440, 100, 60);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1150, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(109, 109, 109)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 541, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        jPanel1.getAccessibleContext().setAccessibleParent(null);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -94,6 +778,114 @@ public class timetable extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel a1;
+    private javax.swing.JLabel a2;
+    private javax.swing.JLabel a3;
+    private javax.swing.JLabel a4;
+    private javax.swing.JLabel a5;
+    private javax.swing.JLabel b1;
+    private javax.swing.JLabel b2;
+    private javax.swing.JLabel b3;
+    private javax.swing.JLabel b4;
+    private javax.swing.JLabel b5;
+    private javax.swing.JLabel c1;
+    private javax.swing.JLabel c2;
+    private javax.swing.JLabel c3;
+    private javax.swing.JLabel c4;
+    private javax.swing.JLabel c5;
+    private javax.swing.JLabel d1;
+    private javax.swing.JLabel d2;
+    private javax.swing.JLabel d3;
+    private javax.swing.JLabel d4;
+    private javax.swing.JLabel d5;
+    private javax.swing.JLabel e1;
+    private javax.swing.JLabel e2;
+    private javax.swing.JLabel e3;
+    private javax.swing.JLabel e4;
+    private javax.swing.JLabel e5;
+    private javax.swing.JLabel f1;
+    private javax.swing.JLabel f2;
+    private javax.swing.JLabel f3;
+    private javax.swing.JLabel f4;
+    private javax.swing.JLabel f5;
+    private javax.swing.JLabel g1;
+    private javax.swing.JLabel g2;
+    private javax.swing.JLabel g3;
+    private javax.swing.JLabel g4;
+    private javax.swing.JLabel g5;
+    private javax.swing.JLabel h1;
+    private javax.swing.JLabel h2;
+    private javax.swing.JLabel h3;
+    private javax.swing.JLabel h4;
+    private javax.swing.JLabel h5;
+    private javax.swing.JLabel i1;
+    private javax.swing.JLabel i2;
+    private javax.swing.JLabel i3;
+    private javax.swing.JLabel i4;
+    private javax.swing.JLabel i5;
+    private javax.swing.JLabel j1;
+    private javax.swing.JLabel j2;
+    private javax.swing.JLabel j3;
+    private javax.swing.JLabel j4;
+    private javax.swing.JLabel j5;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel50;
+    private javax.swing.JLabel jLabel51;
+    private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
+    private javax.swing.JLabel jLabel57;
+    private javax.swing.JLabel jLabel65;
+    private javax.swing.JLabel jLabel66;
+    private javax.swing.JLabel jLabel67;
+    private javax.swing.JLabel jLabel68;
+    private javax.swing.JLabel jLabel69;
+    private javax.swing.JLabel jLabel70;
+    private javax.swing.JLabel jLabel71;
+    private javax.swing.JLabel jLabel72;
+    private javax.swing.JLabel jLabel73;
+    private javax.swing.JLabel jLabel74;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables

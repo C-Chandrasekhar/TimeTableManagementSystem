@@ -19,7 +19,6 @@ public class Schedule {
     private boolean isFitnessChanged= true;
     private double fitness=-1;
     
-    
     public Schedule(Data data){
         this.data=data;
         classes= new ArrayList<Class>(data.getNumberOfClasses());

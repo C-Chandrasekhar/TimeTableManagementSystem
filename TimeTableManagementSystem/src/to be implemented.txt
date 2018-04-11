@@ -8,7 +8,9 @@
 
 3.implementing labs 
     three hours should be adjacent                                  --- done -_-
-    
+
+4.implement sub groups for labs
+
 5. create UI                                 
 
 6. create database which would easy to implement all below queries    
