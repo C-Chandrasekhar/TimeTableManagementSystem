@@ -150,7 +150,7 @@ public class admin_login extends javax.swing.JFrame {
             }
             else {
                 textDisplay.setForeground(Color.red);
-                textDisplay.setText("Invalid usernmae or password");
+                textDisplay.setText("Invalid username or password");
                 idTextfield.setText("");
                 password.setText("");
             }

@@ -39,19 +39,19 @@ public class Data {
         setMeetingTimes();
         setLabMeetingTimes();
         
-        Instructor inst1 = new Instructor("id1", "name1");
-        Instructor inst2 = new Instructor("id2", "name2");
-        Instructor inst3 = new Instructor("id3", "name3");
-        Instructor inst4 = new Instructor("id4", "name4");
+        Instructor inst1 = new Instructor("inst_id1", "inst_name1");
+        Instructor inst2 = new Instructor("inst_id2", "inst_name2");
+        Instructor inst3 = new Instructor("inst_id3", "inst_name3");
+        Instructor inst4 = new Instructor("inst_id4", "inst_name4");
         instructors = new ArrayList<Instructor> (Arrays.asList(inst1 , inst2, inst3, inst4));
         
-        Course course1= new Course("cname1" , "cid1" , new ArrayList<Instructor> (Arrays.asList(inst1 , inst2)), 4,"no");
-        Course course2= new Course("cname2" , "cid2" , new ArrayList<Instructor> (Arrays.asList(inst1 , inst3)), 3, "no");
-        Course course3= new Course("cname3" , "cid3" , new ArrayList<Instructor> (Arrays.asList(inst2, inst4)), 3, "no");
-        Course course4= new Course("cname4" , "cid4" , new ArrayList<Instructor> (Arrays.asList(inst1)), 3, "no");
-        Course course5= new Course("cname5" , "cid5" , new ArrayList<Instructor> (Arrays.asList(inst3 , inst2)), 4, "no");
-        Course course6= new Course("cname6" , "cid6" , new ArrayList<Instructor> (Arrays.asList(inst1 , inst4)), 3, "yes");
-        Course course7= new Course("cname7" , "cid7" , new ArrayList<Instructor> (Arrays.asList(inst1 , inst2)),3 ,"no");
+        Course course1= new Course("c_name1" , "course_id1" , new ArrayList<Instructor> (Arrays.asList(inst1 , inst2)), 4,"no");
+        Course course2= new Course("c_name2" , "course_id2" , new ArrayList<Instructor> (Arrays.asList(inst1 , inst3)), 3, "no");
+        Course course3= new Course("c_name3" , "course_id3" , new ArrayList<Instructor> (Arrays.asList(inst2, inst4)), 3, "no");
+        Course course4= new Course("c_name4" , "course_id4" , new ArrayList<Instructor> (Arrays.asList(inst1)), 3, "no");
+        Course course5= new Course("c_name5" , "course_id5" , new ArrayList<Instructor> (Arrays.asList(inst3 , inst2)), 4, "no");
+        Course course6= new Course("c_name6" , "course_id6" , new ArrayList<Instructor> (Arrays.asList(inst1 , inst4)), 3, "yes");
+        Course course7= new Course("c_name7" , "course_id7" , new ArrayList<Instructor> (Arrays.asList(inst1 , inst2)),3 ,"no");
         
         courses = new ArrayList<Course>(Arrays.asList(course1 , course2, course3, course4, course5, course6, course7));
         
@@ -121,9 +121,9 @@ public class Data {
         rooms= new ArrayList<Room>(Arrays.asList(room1 , room2 , room3,room4 , room5 , room6,room7 , room8));
     }
     private void setLabRooms(){
-        Room room1= new Room("UG lab", 110);
-        Room room2= new Room("PG lab", 110);
-        Room room3= new Room("Networks lab", 110);
+        Room room1= new Room("UGlab", 110);
+        Room room2= new Room("PGlab", 110);
+        Room room3= new Room("networkslab", 110);
         labRooms= new ArrayList<Room>(Arrays.asList(room1, room2 , room3));
     }
     

@@ -14,13 +14,12 @@ public class MySql {
     
     public static Connection ConnectDB(){
         try{
+            
             String str="com.mysql.jdbc.Driver";
-            String url="jdbc:mysql://127.0.0.1:3306/timetablemanagementsystem";
+            String url="jdbc:mysql://localhost:3306/timetablemanagementsystem";
             
             Class.forName(str);
-            JOptionPane.showMessageDialog(null, "inside try 3");
-            Connection conn = DriverManager.getConnection(url);
-            JOptionPane.showMessageDialog(null, "inside try 3");
+            Connection conn = DriverManager.getConnection(url,"root" , "");
             JOptionPane.showMessageDialog(null, "connected to database");
             return conn;
         }catch(Exception e){

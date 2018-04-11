@@ -4,7 +4,10 @@
  * and open the template in the editor.
  */
 package implementation;
+import DataBase.MySql;
 import domain.Instructor;
+import java.sql.*;
+import javax.swing.JOptionPane;
 /**
  *
  * @author chandrasekhar ch
@@ -21,7 +24,40 @@ public class Driver {
      
     public static void main(String args []){
         
-        Driver driver= new Driver();
+//        Driver driver= new Driver();
+//        driver.data=new Data();
+//        //driver.printAvailableData();
+//        
+//        GeneticAlgorithm geneticAlgorithm = new GeneticAlgorithm(driver.data);
+//        Population population = new Population(Driver.POPULATION_SIZE, driver.data).sortByFitness();
+//        
+//        int t=0;
+//        while(population.getSchedules().get(0).getFitness()!=1.0){
+//            population = geneticAlgorithm.evolve(population).sortByFitness();
+//            t++;
+//        }
+//        /*for (int i=0;i<population.getSchedules().size();i++){
+//            Schedule schedule=population.getSchedules().get(i);
+//            System.out.println("       "+ schedule + "      " );
+//             System.out.println(schedule.getFitness());
+//             System.out.println(schedule.getNumberOfConflicts());
+//        }
+//        population.getSchedules().forEach(x ->
+//                System.out.println(x+ "  |  " +
+//                        String.format("%.5f", x.getFitness()) +"  |  " +x.getNumberOfConflicts())
+//        );*/
+//        System.out.println("while loop runned for "+t);
+//        //try{
+//        driver.printTimeTable(population.getSchedules().get(0));
+//         driver.printTimeTable(population.getSchedules().get(1));
+//    
+//        //}catch(Exception e){
+//        //    System.out.println(e);
+//        //}
+    }
+    
+    public static void generateTimeTable(){
+         Driver driver= new Driver();
         driver.data=new Data();
         //driver.printAvailableData();
         
@@ -33,38 +69,56 @@ public class Driver {
             population = geneticAlgorithm.evolve(population).sortByFitness();
             t++;
         }
-        /*for (int i=0;i<population.getSchedules().size();i++){
-            Schedule schedule=population.getSchedules().get(i);
-            System.out.println("       "+ schedule + "      " );
-             System.out.println(schedule.getFitness());
-             System.out.println(schedule.getNumberOfConflicts());
-        }
-        population.getSchedules().forEach(x ->
-                System.out.println(x+ "  |  " +
-                        String.format("%.5f", x.getFitness()) +"  |  " +x.getNumberOfConflicts())
-        );*/
+        
         System.out.println("while loop runned for "+t);
-        //try{
+        
         driver.printTimeTable(population.getSchedules().get(0));
-         driver.printTimeTable(population.getSchedules().get(1));
+        //driver.printTimeTable(population.getSchedules().get(1));
     
-        //}catch(Exception e){
-        //    System.out.println(e);
-        //}
     }
-    
     private void printTimeTable(Schedule schedule){
         
+        Connection conn= MySql.ConnectDB();
+        Statement stmt=null;
+        String str=null;
+        
+        str="truncate table class";
+         try {
+            stmt=conn.createStatement();
+            stmt.executeUpdate(str);
+            }catch(Exception e){
+                JOptionPane.showMessageDialog(null, "error in truncating");
+                JOptionPane.showMessageDialog(null, e);
+            }
+        
+        for (int i=0;i<schedule.getClasses().size();i++){
+            str="insert into class (classId , departmentId , courseId, instructorId , meetingTImeId, classroom_id)"
+                 + " VALUES ("+(i+1)+
+                            ",'"+schedule.getClasses().get(i).getDepartment().getName()+ 
+                            "','"+schedule.getClasses().get(i).getCourse().getId()+
+                            "','"+schedule.getClasses().get(i).getInstructor().getId()+
+                            "','"+schedule.getClasses().get(i).getMeetingTime().getId()+
+                            "','"+schedule.getClasses().get(i).getRoom().getId()+"')";
+            
+            System.out.println(str);
+            try {
+            stmt=conn.createStatement();
+            stmt.executeUpdate(str);
+            }catch(Exception e){
+                JOptionPane.showMessageDialog(null, "error in inserting where i="+(i+1));
+                JOptionPane.showMessageDialog(null, e);
+            }
+        }
         for (int i=0;i<schedule.getClasses().size();i++){
             System.out.print(schedule.getClasses().get(i).getId() + "  |  ");
             System.out.print(schedule.getClasses().get(i).getDepartment().getName()+ "  |  ");
             System.out.print(schedule.getClasses().get(i).getCourse().getName()+"   |  ");
-           // Instructor ins= schedule.getClasses().get(i).getInstructor();
+            // Instructor ins= schedule.getClasses().get(i).getInstructor();
             //System.out.print(ins+"  ");
             System.out.print(schedule.getClasses().get(i).getInstructor().getName()+"  |   ");
             System.out.print(schedule.getClasses().get(i).getRoom().getId()+ "   |  ");
-            System.out.print(schedule.getClasses().get(i).getMeetingTime().getTime());
-            System.out.println("  collisions "+schedule.getNumberOfConflicts());
+            System.out.println(schedule.getClasses().get(i).getMeetingTime().getTime());
+            //System.out.println("  collisions "+schedule.getNumberOfConflicts());
             
             
         }
