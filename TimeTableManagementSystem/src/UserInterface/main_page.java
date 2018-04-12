@@ -100,6 +100,11 @@ public class main_page extends javax.swing.JFrame {
 
         jButton8.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jButton8.setText("2nd year-ECEA");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
 
         jButton9.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jButton9.setText("2nd year-CSB");
@@ -133,6 +138,11 @@ public class main_page extends javax.swing.JFrame {
 
         jButton17.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jButton17.setText("2nd year-CSA");
+        jButton17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton17ActionPerformed(evt);
+            }
+        });
 
         jButton18.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jButton18.setText("2nd year-ECEB");
@@ -338,8 +348,16 @@ public class main_page extends javax.swing.JFrame {
 
     private void adminButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminButtonActionPerformed
         new admin_login().setVisible(true);
-        //this.setVisible(false);
+        this.setVisible(false);
     }//GEN-LAST:event_adminButtonActionPerformed
+
+    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
+        
+    }//GEN-LAST:event_jButton17ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton8ActionPerformed
 
     /**
      * @param args the command line arguments

@@ -134,6 +134,8 @@ public class timetable extends javax.swing.JFrame {
         i5 = new javax.swing.JLabel();
         j5 = new javax.swing.JLabel();
         e5 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel45 = new javax.swing.JLabel();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -723,21 +725,32 @@ public class timetable extends javax.swing.JFrame {
         jPanel1.add(e5);
         e5.setBounds(540, 440, 100, 60);
 
+        jLabel11.setFont(new java.awt.Font("Arial", 1, 40)); // NOI18N
+        jLabel11.setText("MNNIT ALLAHABAD");
+        jPanel1.add(jLabel11);
+        jLabel11.setBounds(350, 10, 379, 47);
+
+        jLabel45.setFont(new java.awt.Font("Arial", 1, 30)); // NOI18N
+        jLabel45.setText("TIME TABLE MANAGER");
+        jPanel1.add(jLabel45);
+        jLabel45.setBounds(370, 80, 339, 35);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1150, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1130, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(109, 109, 109)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(96, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 541, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(24, 24, 24))
         );
-
-        jPanel1.getAccessibleContext().setAccessibleParent(null);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -829,6 +842,7 @@ public class timetable extends javax.swing.JFrame {
     private javax.swing.JLabel j4;
     private javax.swing.JLabel j5;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
@@ -864,6 +878,7 @@ public class timetable extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel51;
