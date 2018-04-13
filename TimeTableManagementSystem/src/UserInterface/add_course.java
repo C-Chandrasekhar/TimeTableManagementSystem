@@ -5,6 +5,11 @@
  */
 package UserInterface;
 
+import DataBase.MySql;
+import java.awt.Color;
+import java.sql.*;
+import javax.swing.JOptionPane;
+
 public class add_course extends javax.swing.JFrame {
 
     /**
@@ -30,18 +35,16 @@ public class add_course extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        course_name = new javax.swing.JTextField();
-        course_id = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        total_classes = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
-        instructor_name = new javax.swing.JTextField();
-        submit = new javax.swing.JButton();
-        back = new javax.swing.JButton();
+        course_nameTextField = new javax.swing.JTextField();
+        islabTextField = new javax.swing.JTextField();
+        totalClassesTextField = new javax.swing.JTextField();
+        submitButton = new javax.swing.JButton();
+        backButton = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
+        course_idTextField = new javax.swing.JTextField();
+        displayText = new javax.swing.JLabel();
 
         jTextField1.setBackground(new java.awt.Color(0, 0, 0));
         jTextField1.setFont(new java.awt.Font("Tahoma", 1, 80)); // NOI18N
@@ -64,23 +67,25 @@ public class add_course extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel5.setText("Total classes per week  :");
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton1.setText("Yes");
-
-        jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton2.setText("No");
-
-        jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jLabel6.setText("Enter instructor name  :");
-
-        submit.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        submit.setText("Submit");
-
-        back.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        back.setText("Back");
-        back.addActionListener(new java.awt.event.ActionListener() {
+        course_nameTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backActionPerformed(evt);
+                course_nameTextFieldActionPerformed(evt);
+            }
+        });
+
+        submitButton.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        submitButton.setText("Submit");
+        submitButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submitButtonActionPerformed(evt);
+            }
+        });
+
+        backButton.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        backButton.setText("Back");
+        backButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backButtonActionPerformed(evt);
             }
         });
 
@@ -93,6 +98,8 @@ public class add_course extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Arial", 1, 30)); // NOI18N
         jLabel10.setText("TIME TABLE MANAGER");
 
+        displayText.setFont(new java.awt.Font("Tahoma", 3, 17)); // NOI18N
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -100,44 +107,41 @@ public class add_course extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(185, 185, 185)
-                        .addComponent(submit)
-                        .addGap(78, 78, 78))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGap(71, 71, 71)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel5)
-                            .addComponent(jLabel6)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel3)
                                 .addComponent(jLabel4)
                                 .addComponent(jLabel2)))
-                        .addGap(34, 34, 34)))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(back)
+                        .addGap(34, 34, 34)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(course_nameTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE)
+                            .addComponent(islabTextField)
+                            .addComponent(totalClassesTextField)
+                            .addComponent(course_idTextField)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton1)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton2))
-                    .addComponent(course_name, javax.swing.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE)
-                    .addComponent(course_id)
-                    .addComponent(total_classes)
-                    .addComponent(instructor_name))
+                        .addGap(186, 186, 186)
+                        .addComponent(submitButton)
+                        .addGap(92, 92, 92)
+                        .addComponent(backButton)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 126, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 113, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 392, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(122, 122, 122))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(126, 126, 126)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 392, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(109, 109, 109))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel10)
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                        .addGap(140, 140, 140))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(displayText, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(113, 113, 113))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -146,43 +150,41 @@ public class add_course extends javax.swing.JFrame {
                     .addComponent(jLabel1)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel9)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel10)
+                                .addGap(40, 40, 40))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(12, 12, 12)
-                                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(jLabel9)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabel10)))
-                        .addGap(10, 10, 10)
+                                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(10, 10, 10)))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(course_name, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(course_nameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel3)
-                            .addComponent(course_id, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(course_idTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton1)
-                            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel4))
+                            .addComponent(jLabel4)
+                            .addComponent(islabTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(total_classes, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(totalClassesTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jLabel5)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(instructor_name, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6))
-                .addGap(25, 25, 25)
+                .addComponent(displayText, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(submit)
-                    .addComponent(back))
-                .addContainerGap(55, Short.MAX_VALUE))
+                    .addComponent(submitButton)
+                    .addComponent(backButton))
+                .addGap(60, 60, 60))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -200,10 +202,65 @@ public class add_course extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
+    private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
         new start().setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_backActionPerformed
+    }//GEN-LAST:event_backButtonActionPerformed
+
+    private void submitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitButtonActionPerformed
+        
+        displayText.setText("");
+        
+        String courseName = course_nameTextField.getText();
+        String courseId = course_idTextField.getText();
+        int numberOfClasses  = Integer.parseInt(totalClassesTextField.getText());
+        String isLab = islabTextField.getText();
+        
+        if(course_nameTextField.getText().isEmpty()){
+            displayText.setText("courseName should not be empty");
+            displayText.setForeground(Color.red);
+            //clearText();
+        }
+        else if (course_idTextField.getText().isEmpty()){
+            displayText.setText("courseId should not be empty");
+            displayText.setForeground(Color.red);
+            //clearText();
+        }
+        else if(islabTextField.getText().isEmpty()){
+            displayText.setText("IsLab cannot be empty");
+            displayText.setForeground(Color.red);
+            //clearText();
+        }
+        else if(isLab!="yes" || isLab!="no"){
+            displayText.setText("is lab should be either 'yes' or 'no'");
+            displayText.setForeground(Color.red);
+            islabTextField.setText("");
+        }
+       
+        Connection conn=MySql.ConnectDB();
+        Statement stat=null;
+        String sql=null;
+        
+        sql="insert into course (courseName , courseId , numberOfClassesPerWeek , isLab)"
+                + "values ('" + courseName + "','" +courseId+ "','" + numberOfClasses+"','"+isLab+"')";
+        
+        try {
+        stat=conn.createStatement();
+        stat.executeUpdate(sql);
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, "error in adding course"+e);
+        }
+    }//GEN-LAST:event_submitButtonActionPerformed
+    
+    private void clearText(){
+            course_idTextField.setText("");
+            course_nameTextField.setText("");
+            totalClassesTextField.setText("");
+            islabTextField.setText("");
+    }
+    private void course_nameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_course_nameTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_course_nameTextFieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -241,24 +298,22 @@ public class add_course extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton back;
-    private javax.swing.JTextField course_id;
-    private javax.swing.JTextField course_name;
-    private javax.swing.JTextField instructor_name;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton backButton;
+    private javax.swing.JTextField course_idTextField;
+    private javax.swing.JTextField course_nameTextField;
+    private javax.swing.JLabel displayText;
+    private javax.swing.JTextField islabTextField;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JButton submit;
-    private javax.swing.JTextField total_classes;
+    private javax.swing.JButton submitButton;
+    private javax.swing.JTextField totalClassesTextField;
     // End of variables declaration//GEN-END:variables
 }
