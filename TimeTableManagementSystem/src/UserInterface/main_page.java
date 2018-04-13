@@ -5,6 +5,13 @@
  */
 
 package UserInterface;
+
+import DataBase.MySql;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import javax.swing.JOptionPane;
+
 public class main_page extends javax.swing.JFrame {
 
     /**
@@ -36,18 +43,18 @@ public class main_page extends javax.swing.JFrame {
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jButton8 = new javax.swing.JButton();
+        ecebutton = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
         jButton11 = new javax.swing.JButton();
         jButton12 = new javax.swing.JButton();
         jButton13 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        jButton14 = new javax.swing.JButton();
+        itbutton = new javax.swing.JButton();
         jButton15 = new javax.swing.JButton();
         jButton16 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        jButton17 = new javax.swing.JButton();
+        csebutton = new javax.swing.JButton();
         jButton18 = new javax.swing.JButton();
         jButton19 = new javax.swing.JButton();
         jButton20 = new javax.swing.JButton();
@@ -98,11 +105,11 @@ public class main_page extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jLabel2.setText("B.Tech CSE");
 
-        jButton8.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton8.setText("2nd year-ECEA");
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
+        ecebutton.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        ecebutton.setText("2nd year-ECEA");
+        ecebutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
+                ecebuttonActionPerformed(evt);
             }
         });
 
@@ -124,8 +131,13 @@ public class main_page extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jLabel3.setText("B.Tech IT");
 
-        jButton14.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton14.setText("2nd year");
+        itbutton.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        itbutton.setText("2nd year");
+        itbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itbuttonActionPerformed(evt);
+            }
+        });
 
         jButton15.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jButton15.setText("3rd year");
@@ -136,11 +148,11 @@ public class main_page extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jLabel4.setText("B.Tech ECE");
 
-        jButton17.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton17.setText("2nd year-CSA");
-        jButton17.addActionListener(new java.awt.event.ActionListener() {
+        csebutton.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        csebutton.setText("2nd year-CSA");
+        csebutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton17ActionPerformed(evt);
+                csebuttonActionPerformed(evt);
             }
         });
 
@@ -240,7 +252,7 @@ public class main_page extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jButton7))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(csebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton9)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -252,13 +264,13 @@ public class main_page extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton13))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton14)
+                        .addComponent(itbutton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton15)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton16))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton8)
+                        .addComponent(ecebutton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton18)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -301,7 +313,7 @@ public class main_page extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton17)
+                    .addComponent(csebutton)
                     .addComponent(jButton9)
                     .addComponent(jButton10)
                     .addComponent(jButton11)
@@ -311,20 +323,20 @@ public class main_page extends javax.swing.JFrame {
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton14)
                     .addComponent(jButton15)
-                    .addComponent(jButton16))
+                    .addComponent(jButton16)
+                    .addComponent(itbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ecebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton21, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton22, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(99, Short.MAX_VALUE))
+                .addGap(99, 99, 99))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -335,10 +347,11 @@ public class main_page extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
@@ -351,13 +364,33 @@ public class main_page extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_adminButtonActionPerformed
 
-    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
+    private void csebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_csebuttonActionPerformed
         
-    }//GEN-LAST:event_jButton17ActionPerformed
+    }//GEN-LAST:event_csebuttonActionPerformed
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+    private void ecebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ecebuttonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton8ActionPerformed
+    }//GEN-LAST:event_ecebuttonActionPerformed
+
+    private void itbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itbuttonActionPerformed
+        
+        Connection conn=MySql.ConnectDB();
+        PreparedStatement sta=null;
+        ResultSet res=null;
+        
+        String sql="select * from class";
+        
+        try{
+            sta=conn.prepareStatement(sql);
+            res=sta.executeQuery();
+            
+            while(res.next()){
+                
+            }
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        }
+    }//GEN-LAST:event_itbuttonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -396,15 +429,16 @@ public class main_page extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton adminButton;
+    private javax.swing.JButton csebutton;
+    private javax.swing.JButton ecebutton;
+    private javax.swing.JButton itbutton;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton16;
-    private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton18;
     private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton2;
@@ -417,7 +451,6 @@ public class main_page extends javax.swing.JFrame {
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;

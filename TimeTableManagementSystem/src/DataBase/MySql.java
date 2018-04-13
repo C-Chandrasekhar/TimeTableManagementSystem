@@ -20,7 +20,7 @@ public class MySql {
             
             Class.forName(str);
             Connection conn = DriverManager.getConnection(url,"root" , "");
-            JOptionPane.showMessageDialog(null, "connected to database");
+            //JOptionPane.showMessageDialog(null, "connected to database");
             return conn;
         }catch(Exception e){
             JOptionPane.showMessageDialog(null, "inside catch ");

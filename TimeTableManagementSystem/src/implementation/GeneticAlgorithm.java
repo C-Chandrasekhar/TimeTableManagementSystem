@@ -13,7 +13,6 @@ import domain.Class;
  */
 public class GeneticAlgorithm {
     private Data data;
-   
     
     public GeneticAlgorithm(Data data){
         this.data=data;
