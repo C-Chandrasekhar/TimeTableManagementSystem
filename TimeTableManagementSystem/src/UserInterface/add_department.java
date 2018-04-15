@@ -44,6 +44,8 @@ public class add_department extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         strengthTextField = new javax.swing.JTextField();
         displayText = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        programTextField = new javax.swing.JTextField();
 
         jButton4.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jButton4.setText("Back");
@@ -87,6 +89,14 @@ public class add_department extends javax.swing.JFrame {
 
         jLabel5.setText("Strength ");
 
+        jLabel6.setText("program");
+
+        programTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                programTextFieldActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -95,31 +105,40 @@ public class add_department extends javax.swing.JFrame {
                 .addGap(24, 24, 24)
                 .addComponent(jLabel2)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(137, 137, 137)
-                        .addComponent(jLabel10))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel9)
-                        .addGap(116, 116, 116))))
+                        .addGap(116, 116, 116))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(137, 137, 137)
+                        .addComponent(jLabel10)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(113, 113, 113)
+                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(96, 96, 96)
+                        .addComponent(programTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(133, 133, 133)
+                        .addComponent(jLabel3)
+                        .addGap(137, 137, 137))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel1)
-                        .addGap(49, 49, 49))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(133, 133, 133)
-                                .addComponent(jLabel3))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(188, 188, 188)
-                                .addComponent(submit)))
-                        .addGap(113, 113, 113)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addGap(49, 49, 49))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(submit)
+                                .addGap(116, 116, 116)))))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(back)
-                    .addComponent(dept_nameTextfield, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(dept_nameTextfield, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(back)))
                 .addGap(0, 133, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(161, 161, 161)
@@ -139,12 +158,16 @@ public class add_department extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel9)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel10)))
+                        .addComponent(jLabel10)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(programTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
@@ -165,11 +188,11 @@ public class add_department extends javax.swing.JFrame {
                             .addComponent(strengthTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addComponent(displayText, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(28, 28, 28)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(submit)
                     .addComponent(back))
-                .addGap(72, 72, 72))
+                .addGap(50, 50, 50))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -197,10 +220,16 @@ public class add_department extends javax.swing.JFrame {
     private void submitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitActionPerformed
         
         String departmentId = dept_nameTextfield.getText();
+        String program = programTextField.getText();
         int semester = Integer.parseInt(semesterTextField.getText());
         int strength = Integer.parseInt(strengthTextField.getText());
         
-        if(dept_nameTextfield.getText().isEmpty()){
+        
+        if (programTextField.getText().isEmpty()){
+            displayText.setText("program shouldnt be empty");
+            displayText.setForeground(Color.red);
+        }
+        else if(dept_nameTextfield.getText().isEmpty()){
             displayText.setText("department name should not be empty");
             displayText.setForeground(Color.red);
         }
@@ -213,30 +242,38 @@ public class add_department extends javax.swing.JFrame {
             displayText.setForeground(Color.red);
         }
         
-        Connection conn=MySql.ConnectDB();
-        Statement stat=null;
-        String sql;
-        
-        sql="insert into department (departmentId , semester , strength)"
-                + "values ('" + departmentId + "','" +semester+ "','" + strength+"')";
-        
-        try {
-            stat=conn.createStatement();
-            stat.executeUpdate(sql);
-            JOptionPane.showMessageDialog(null, "Data entered successfully");
-            clearText();
-        }catch(Exception e){
-            JOptionPane.showMessageDialog(null, "error in adding department");
-            JOptionPane.showMessageDialog(null, e);
+        else {
+            Connection conn=MySql.ConnectDB();
+            Statement stat=null;
+            String sql;
+
+            sql="insert into department (departmentId , semester , strength , program)"
+                    + "values ('" + departmentId + "','" +semester+ "','" + strength+ "','" +program +"')";
+
+            try {
+                stat=conn.createStatement();
+                stat.executeUpdate(sql);
+                JOptionPane.showMessageDialog(null, "Data entered successfully");
+                clearText();
+            }catch(Exception e){
+                JOptionPane.showMessageDialog(null, "error in adding department");
+                JOptionPane.showMessageDialog(null, e);
+            }
         }
     }//GEN-LAST:event_submitActionPerformed
 
-    private void clearText(){
+     private void clearText(){
         dept_nameTextfield.setText("");
         semesterTextField.setText("");
         strengthTextField.setText("");
+        programTextField.setText("");
         
     }
+    private void programTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_programTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_programTextFieldActionPerformed
+
+   
     /**
      * @param args the command line arguments
      */
@@ -283,8 +320,10 @@ public class add_department extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField programTextField;
     private javax.swing.JTextField semesterTextField;
     private javax.swing.JTextField strengthTextField;
     private javax.swing.JButton submit;
