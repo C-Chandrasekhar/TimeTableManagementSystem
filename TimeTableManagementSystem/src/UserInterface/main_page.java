@@ -7,18 +7,26 @@
 package UserInterface;
 
 import DataBase.MySql;
+import domain.Department;
+import domain.classString;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 public class main_page extends javax.swing.JFrame {
 
+    
+    private ArrayList <classString> classes;
+    private String department;
     /**
      * Creates new form main_page
      */
     public main_page() {
         initComponents();
+         getData();
     }
 
     /**
@@ -50,8 +58,8 @@ public class main_page extends javax.swing.JFrame {
         jButton12 = new javax.swing.JButton();
         jButton13 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        itbutton = new javax.swing.JButton();
-        jButton15 = new javax.swing.JButton();
+        IT2ndyear = new javax.swing.JButton();
+        IT3rdyear = new javax.swing.JButton();
         jButton16 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         csebutton = new javax.swing.JButton();
@@ -131,16 +139,21 @@ public class main_page extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jLabel3.setText("B.Tech IT");
 
-        itbutton.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        itbutton.setText("2nd year");
-        itbutton.addActionListener(new java.awt.event.ActionListener() {
+        IT2ndyear.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        IT2ndyear.setText("2nd year");
+        IT2ndyear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                itbuttonActionPerformed(evt);
+                IT2ndyearActionPerformed(evt);
             }
         });
 
-        jButton15.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton15.setText("3rd year");
+        IT3rdyear.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        IT3rdyear.setText("3rd year");
+        IT3rdyear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                IT3rdyearActionPerformed(evt);
+            }
+        });
 
         jButton16.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jButton16.setText("4th year");
@@ -264,9 +277,9 @@ public class main_page extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton13))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(itbutton)
+                        .addComponent(IT2ndyear)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton15)
+                        .addComponent(IT3rdyear)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton16))
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -322,10 +335,11 @@ public class main_page extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton15)
-                    .addComponent(jButton16)
-                    .addComponent(itbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(IT2ndyear, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(IT3rdyear)
+                        .addComponent(jButton16)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -372,25 +386,55 @@ public class main_page extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_ecebuttonActionPerformed
 
-    private void itbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itbuttonActionPerformed
+    private void IT2ndyearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IT2ndyearActionPerformed
         
+       department="IT";
+       new timetable().setVisible(true);
+    }//GEN-LAST:event_IT2ndyearActionPerformed
+
+    public ArrayList<classString> getClasses(){
+        return classes;
+    }
+    public String get_department(){
+        return department;
+    }
+    
+    private void getData(){
         Connection conn=MySql.ConnectDB();
-        PreparedStatement sta=null;
-        ResultSet res=null;
-        
+       Statement stat=null;
+       ResultSet res=null;
+       
         String sql="select * from class";
         
         try{
-            sta=conn.prepareStatement(sql);
-            res=sta.executeQuery();
-            
+            stat=conn.createStatement();
+            res=stat.executeQuery(sql);
+            //maintain this order (classId , departmentId , courseId, instructorId , meetingTImeId, classroom_id)
             while(res.next()){
+                String classId=res.getString("classId");
+                String departmentId = res.getString("departmentId");
+                String courseId = res.getString("courseId");
+                String instructorId = res.getString("instructorId");
+                String meetingTImeId = res.getString("meetingTImeId");
+                String classroom_id = res.getString("classroom_id");
                 
+                System.out.println("["+classId +","+departmentId +","+courseId +","+instructorId +","+meetingTImeId +","+classroom_id +"]");
+            
+                classString classTemp= new classString(classId,departmentId, courseId, instructorId , meetingTImeId, classroom_id);
+                classes.add(classTemp);
             }
         }catch(Exception e){
             JOptionPane.showMessageDialog(null, e);
         }
-    }//GEN-LAST:event_itbuttonActionPerformed
+    }
+    void displayTimeTable(){
+        new timetable().setVisible(true);
+        this.setVisible(false);
+    }
+    
+    private void IT3rdyearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IT3rdyearActionPerformed
+        
+    }//GEN-LAST:event_IT3rdyearActionPerformed
 
     /**
      * @param args the command line arguments
@@ -428,16 +472,16 @@ public class main_page extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton IT2ndyear;
+    private javax.swing.JButton IT3rdyear;
     private javax.swing.JButton adminButton;
     private javax.swing.JButton csebutton;
     private javax.swing.JButton ecebutton;
-    private javax.swing.JButton itbutton;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton18;
     private javax.swing.JButton jButton19;

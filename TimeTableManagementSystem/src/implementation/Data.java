@@ -55,9 +55,9 @@ public class Data {
         
         courses = new ArrayList<Course>(Arrays.asList(course1 , course2, course3, course4, course5, course6, course7));
         
-        Department dept1= new Department("CSE",55 , new ArrayList<Course> (Arrays.asList(course1 , course2 , course4, course7)));
+        Department dept1= new Department("CSEa",55 , new ArrayList<Course> (Arrays.asList(course1 , course2 , course4, course7)));
         Department dept2= new Department("IT",65 , new ArrayList<Course> (Arrays.asList(course3 , course4, course5)));
-        Department dept3= new Department("ECE",45 , new ArrayList<Course> (Arrays.asList(course1 ,course2,course6, course7)));
+        Department dept3= new Department("CSEb",45 , new ArrayList<Course> (Arrays.asList(course1 ,course2,course6, course7)));
         departments = new ArrayList<Department> (Arrays.asList(dept1, dept2, dept3));
         
         InstructorFix instFix1 = new InstructorFix(dept1, course1,inst1);
