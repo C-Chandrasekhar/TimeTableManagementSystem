@@ -9,24 +9,22 @@ package UserInterface;
 import DataBase.MySql;
 import domain.Department;
 import domain.classString;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 public class main_page extends javax.swing.JFrame {
 
     
-    private ArrayList <classString> classes;
-    private String department;
+    private static ArrayList <classString> classes = new ArrayList<classString>();
+    private static String department;
+   
     /**
      * Creates new form main_page
      */
-    public main_page() {
+    public main_page()  {
         initComponents();
-         getData();
+        //getData();
     }
 
     /**
@@ -387,8 +385,8 @@ public class main_page extends javax.swing.JFrame {
     }//GEN-LAST:event_ecebuttonActionPerformed
 
     private void IT2ndyearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IT2ndyearActionPerformed
-        
-       department="IT";
+        getData();
+        department="IT";
        new timetable().setVisible(true);
     }//GEN-LAST:event_IT2ndyearActionPerformed
 
@@ -400,10 +398,11 @@ public class main_page extends javax.swing.JFrame {
     }
     
     private void getData(){
-        Connection conn=MySql.ConnectDB();
+       Connection conn=MySql.ConnectDB();
        Statement stat=null;
        ResultSet res=null;
        
+        System.out.println("connected to database");
         String sql="select * from class";
         
         try{
@@ -417,9 +416,7 @@ public class main_page extends javax.swing.JFrame {
                 String instructorId = res.getString("instructorId");
                 String meetingTImeId = res.getString("meetingTImeId");
                 String classroom_id = res.getString("classroom_id");
-                
-                System.out.println("["+classId +","+departmentId +","+courseId +","+instructorId +","+meetingTImeId +","+classroom_id +"]");
-            
+                //System.out.println("["+classId +","+departmentId +","+courseId +","+instructorId +","+meetingTImeId +","+classroom_id +"]");
                 classString classTemp= new classString(classId,departmentId, courseId, instructorId , meetingTImeId, classroom_id);
                 classes.add(classTemp);
             }
@@ -427,6 +424,7 @@ public class main_page extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, e);
         }
     }
+    
     void displayTimeTable(){
         new timetable().setVisible(true);
         this.setVisible(false);
@@ -467,6 +465,7 @@ public class main_page extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new main_page().setVisible(true);
+                //getData();
             }
         });
     }

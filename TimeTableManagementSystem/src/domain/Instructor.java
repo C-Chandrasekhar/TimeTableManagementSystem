@@ -18,5 +18,7 @@ public class Instructor {
         return id;
     }
     
-    public String toString(){return name;}
+    public String toString(){
+        return name;
+    }
 }

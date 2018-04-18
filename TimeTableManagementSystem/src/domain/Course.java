@@ -7,14 +7,13 @@ import java.util.ArrayList;
 public class Course {
     private String name;
     private String id;
-    private ArrayList<Instructor> instructors;
+    //private ArrayList<Instructor> instructors;
     private int numOfClassesPerWeek;
     private String isLab;
     
-    public Course (String name , String id , ArrayList<Instructor> ins , int numOfClassesPerWeek, String isLab){
+    public Course (String name , String id , int numOfClassesPerWeek, String isLab){
         this.name=name;
         this.id=id;
-        this.instructors=ins;
         this.numOfClassesPerWeek=numOfClassesPerWeek;
         this.isLab=isLab;
     }
@@ -29,9 +28,9 @@ public class Course {
         return name;
     }
     
-    public ArrayList <Instructor> getInstructors(){
-        return instructors;
-    }
+//    public ArrayList <Instructor> getInstructors(){
+//        return instructors;
+//    }
     
     public int getNumOfClassesPerWeek(){
         return numOfClassesPerWeek;

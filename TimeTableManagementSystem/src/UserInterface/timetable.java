@@ -7,14 +7,13 @@
 package UserInterface;
 
 import domain.classString;
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.*;
 import javax.swing.JLabel;
 import jdk.nashorn.internal.ir.Labels;
 
 public class timetable extends javax.swing.JFrame {
 
-    main_page main= new main_page();
+    //main_page main= new main_page();
     ArrayList <JLabel> labels ;
     
     /**
@@ -23,24 +22,22 @@ public class timetable extends javax.swing.JFrame {
     public timetable() {
         
         initComponents();
-        
-        printTimeTable();
         JLabel tempLabel1= new JLabel();
         labels= new ArrayList<JLabel>(Arrays.asList(tempLabel1,a1, b1, c1, d1, e1, f1, g1 , h1 , i1 ,j1 ,
                                                     a2, b2, c2, d2, e2, f2, g2 , h2 , i2 ,j2 ,
                                                     a3, b3, c3, d3, e3, f3, g3 , h3 , i3 ,j3 ,
                                                     a4, b4, c4, d4, e4, f4, g4 , h4 , i4 ,j4 ,
                                                     a5, b5, c5, d5, e5, f5, g5 , h5 , i5 ,j5 ));
-        
-      
+       printTimeTable();
     }
     
     private void printTimeTable(){
-        ArrayList<classString> classes=main.getClasses();
-        String department = main.get_department();
         
-        int len=classes.size();
-        for (int i=0;i<len;i++){
+        ArrayList<classString> classes = (ArrayList<classString>) new main_page().getClasses();
+        String department = new main_page().get_department();
+        //int len;
+        //len=classes.size();
+        for (int i=0;i<classes.size();i++){
             if(classes.get(i).getDepartmentId().equals(department)){
                 String time = classes.get(i).getMeetingTimeId();
                 String course = classes.get(i).getCourseId();
@@ -51,13 +48,15 @@ public class timetable extends javax.swing.JFrame {
     }
     
     private void putText(String time , String course , String instructor){
-        
+  
         int index=0;
-        index = time.charAt(0);
-        if(time.equals("1a")){
-            labels.get(index).setText("<html>"+course+"<br>"+instructor);
-        }
+        String str="";
+        str=str+time.charAt(0);
+        index = Integer.parseInt(str)-1;
+        index =index*10;
+        index = index + (time.charAt(1)-'a')+1;
         
+        labels.get(index).setText("<html>"+course+"<br>"+instructor);
     }
     
     /*
@@ -183,7 +182,6 @@ public class timetable extends javax.swing.JFrame {
         jLabel45 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         departmentDisplay = new javax.swing.JLabel();
-        multiline = new javax.swing.JLabel();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -789,8 +787,6 @@ public class timetable extends javax.swing.JFrame {
         jLabel1.setBounds(880, 110, 90, 20);
         jPanel1.add(departmentDisplay);
         departmentDisplay.setBounds(980, 110, 120, 20);
-        jPanel1.add(multiline);
-        multiline.setBounds(30, 20, 210, 90);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -803,10 +799,9 @@ public class timetable extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(96, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 541, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 524, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 1, Short.MAX_VALUE))
         );
 
         pack();
@@ -963,6 +958,5 @@ public class timetable extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JLabel multiline;
     // End of variables declaration//GEN-END:variables
 }

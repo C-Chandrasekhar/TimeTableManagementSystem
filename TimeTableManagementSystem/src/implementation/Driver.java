@@ -26,7 +26,7 @@ public class Driver {
         
 //        Driver driver= new Driver();
 //        driver.data=new Data();
-//        //driver.printAvailableData();
+//        driver.printAvailableData();
 //        
 //        GeneticAlgorithm geneticAlgorithm = new GeneticAlgorithm(driver.data);
 //        Population population = new Population(Driver.POPULATION_SIZE, driver.data).sortByFitness();
@@ -36,30 +36,17 @@ public class Driver {
 //            population = geneticAlgorithm.evolve(population).sortByFitness();
 //            t++;
 //        }
-//        /*for (int i=0;i<population.getSchedules().size();i++){
-//            Schedule schedule=population.getSchedules().get(i);
-//            System.out.println("       "+ schedule + "      " );
-//             System.out.println(schedule.getFitness());
-//             System.out.println(schedule.getNumberOfConflicts());
-//        }
-//        population.getSchedules().forEach(x ->
-//                System.out.println(x+ "  |  " +
-//                        String.format("%.5f", x.getFitness()) +"  |  " +x.getNumberOfConflicts())
-//        );*/
-//        System.out.println("while loop runned for "+t);
-//        //try{
-//        driver.printTimeTable(population.getSchedules().get(0));
+//        System.out.println("while loop runned for " + t);
+//        
+//         driver.printTimeTable(population.getSchedules().get(0));
 //         driver.printTimeTable(population.getSchedules().get(1));
 //    
-//        //}catch(Exception e){
-//        //    System.out.println(e);
-//        //}
     }
     
     public static void generateTimeTable(){
-         Driver driver= new Driver();
+        Driver driver= new Driver();
         driver.data=new Data();
-        //driver.printAvailableData();
+        driver.printAvailableData();
         
         GeneticAlgorithm geneticAlgorithm = new GeneticAlgorithm(driver.data);
         Population population = new Population(Driver.POPULATION_SIZE, driver.data).sortByFitness();
@@ -68,10 +55,11 @@ public class Driver {
         while(population.getSchedules().get(0).getFitness()!=1.0){
             population = geneticAlgorithm.evolve(population).sortByFitness();
             t++;
+            System.out.println("inside while "+t);
         }
         
         System.out.println("while loop runned for "+t);
-        
+        System.out.println(population.getSchedules().get(0).getClasses().get(20).getInstructor().getId());
         driver.printTimeTable(population.getSchedules().get(0));
         //driver.printTimeTable(population.getSchedules().get(1));
     
@@ -91,6 +79,7 @@ public class Driver {
                 JOptionPane.showMessageDialog(null, e);
             }
         
+         System.out.println("before forloop");
         for (int i=0;i<schedule.getClasses().size();i++){
             str="insert into class (classId , departmentId , courseId, instructorId , meetingTImeId, classroom_id)"
                  + " VALUES ("+(i+1)+
@@ -132,7 +121,7 @@ public class Driver {
                 System.out.println("name :"+ x.getName() + " capacity :" + x.getCapacity() + " courses :"+ x.getCourses()));
         System.out.println("Available Courses=>");
         data.getCourses().forEach(x ->
-                System.out.println("course :"+x.getName() + " id :"+ x.getId() + " faculty :"+x.getInstructors()));
+                System.out.println("course :"+x.getName() + " id :"+ x.getId()));
         
         System.out.println("Available Rooms=>");
         data.getRooms().forEach(x ->
@@ -140,6 +129,11 @@ public class Driver {
         System.out.println("Available Instructors=>");
         data.getInstructors().forEach(x ->
                 System.out.println("name :"+ x.getName()+ " id :"+x.getId()));
+        
+        System.out.println("Available instructorFix=>");
+        data.getInstructorsFix().forEach(x->
+                System.out.println("instrcutor "+x.getInstructorFix().getId()+ " department " + x.getDepartmentFix() + " course "+
+                        x.getCourseFix()));
         
         System.out.println("Available MeetingRooms=>");
         data.getMeetingTimes().forEach(x ->

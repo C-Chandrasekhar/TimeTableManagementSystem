@@ -35,7 +35,7 @@ public class Schedule {
             for (int j=0;j<course.size();j++){
                 //<h1>a loop for number of classes for each course</h1>
                 if(course.get(j).getIsLab().equals("no")){
-                    
+                    //System.out.println("inside a theory course " + course.get(j).getIsLab());
                     for (int k=0;k<course.get(j).getNumOfClassesPerWeek();k++){
                         
                         Class newClass = new Class(classNumber++ , dept.get(i), course.get(j));
@@ -43,10 +43,16 @@ public class Schedule {
                         //newClass.setInstructor(data.getInstructors().get((int)(data.getInstructors().size()* Math.random())));
                         
                         instructorsFix=data.getInstructorsFix();
+                        //System.out.println(instructorsFix.size());
                         for (int ite=0;ite<instructorsFix.size();ite++){
-                            if(instructorsFix.get(ite).getDepartmentFix()== dept.get(i) 
-                                && instructorsFix.get(ite).getCourseFix()== course.get(j) )
+                            //System.out.println("inside for loop of "+ite + " "+instructorsFix.get(ite).getDepartmentFix()+" "+dept.get(i)
+                           // +" "+instructorsFix.get(ite).getCourseFix()+ " "+course.get(j));
+                            if(instructorsFix.get(ite).getDepartmentFix().getName().equals(dept.get(i).getName()) 
+                                && instructorsFix.get(ite).getCourseFix().getId().equals(course.get(j).getId())){
+                                
+                               // System.out.println("inside set instructor");
                                 newClass.setInstructor(instructorsFix.get(ite).getInstructorFix());
+                            }
                         }
             // newClass.setInstructor(data.getInstructorsFix(course.get(j), dept.get(i)).get((int)
             //(data.getInstructorsFix(course.get(j), dept.get(i)).size()* Math.random())));
@@ -75,8 +81,8 @@ public class Schedule {
                      
                      instructorsFix=data.getInstructorsFix();
                         for (int ite=0;ite<instructorsFix.size();ite++){
-                            if(instructorsFix.get(ite).getDepartmentFix()== dept.get(i) 
-                                && instructorsFix.get(ite).getCourseFix()== course.get(j) ){
+                            if(instructorsFix.get(ite).getDepartmentFix().getName().equals(dept.get(i).getName()) 
+                                && instructorsFix.get(ite).getCourseFix().getId().equals(course.get(j).getId())){
                                 newClass1.setInstructor(instructorsFix.get(ite).getInstructorFix());
                                 newClass2.setInstructor(instructorsFix.get(ite).getInstructorFix());
                                 newClass3.setInstructor(instructorsFix.get(ite).getInstructorFix());

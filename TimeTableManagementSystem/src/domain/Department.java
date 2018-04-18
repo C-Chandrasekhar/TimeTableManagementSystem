@@ -23,5 +23,7 @@ public class Department {
     public ArrayList <Course> getCourses(){
         return courses;
     }
-    
+    public String toString(){
+        return name;
+    }
 }

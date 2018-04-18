@@ -32,4 +32,8 @@ public class InstructorFix {
     public Department getDepartmentFix(){
         return department;
     }
+    
+    public String toString(){
+        return  instructor.getName()+" "+course.getName()+" "+department.getName();
+    } 
 }
