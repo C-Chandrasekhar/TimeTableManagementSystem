@@ -27,6 +27,23 @@ public class Data {
         initialise();
     }
     
+     private Data initialise() {
+        //Taking input of all data from the database
+       
+        getRoomsData();
+        getMeetingTimesData();
+        setLabMeetingTimes();
+        getInstructorsData();
+        getCoursesData();
+        getDepartmentsData();
+        getInstructorFixData();
+        
+        for (int i=0;i<departments.size(); i++){
+            numberOfClasses += departments.get(i).getCourses().size();
+        }
+        return this;
+    }
+     
     private void getRoomsData(){
         Connection conn= MySql.ConnectDB();
         Statement stat=null;
@@ -259,26 +276,7 @@ public class Data {
         }
     }
     
-    private Data initialise() {
-        //initialising all data or taking input of all data
-        //System.out.println("Inside Data initilization class");
-       
-        getRoomsData();
-        getMeetingTimesData();
-        setLabMeetingTimes();
-        getInstructorsData();
-        getCoursesData();
-        getDepartmentsData();
-        getInstructorFixData();
-        
-        
-        for (int i=0;i<departments.size(); i++){
-            numberOfClasses += departments.get(i).getCourses().size();
-        }
-        return this;
-    }
    
-    
     private void setLabMeetingTimes(){
         ArrayList<String> list1= new ArrayList<String>(Arrays.asList("1","2","3","4","5"));
         ArrayList<String> list2= new ArrayList<String>(Arrays.asList("a","b","c","g","h"));
@@ -321,3 +319,7 @@ public class Data {
         return numberOfClasses;
     }
 }
+
+
+// in the data class we will take all the input from the database to variables which are private
+// and we write all the public functions to get access to data 

@@ -35,6 +35,7 @@ public class timetable extends javax.swing.JFrame {
         
         ArrayList<classString> classes = (ArrayList<classString>) new main_page().getClasses();
         String department = new main_page().get_department();
+        departmentLabelField.setText(department);
         //int len;
         //len=classes.size();
         for (int i=0;i<classes.size();i++){
@@ -180,8 +181,10 @@ public class timetable extends javax.swing.JFrame {
         e5 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel45 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        departmentLabel = new javax.swing.JLabel();
         departmentDisplay = new javax.swing.JLabel();
+        departmentLabelField = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -774,39 +777,56 @@ public class timetable extends javax.swing.JFrame {
         jLabel11.setFont(new java.awt.Font("Arial", 1, 40)); // NOI18N
         jLabel11.setText("MNNIT ALLAHABAD");
         jPanel1.add(jLabel11);
-        jLabel11.setBounds(350, 10, 379, 47);
+        jLabel11.setBounds(120, 10, 379, 47);
 
         jLabel45.setFont(new java.awt.Font("Arial", 1, 30)); // NOI18N
         jLabel45.setText("TIME TABLE MANAGER");
         jPanel1.add(jLabel45);
-        jLabel45.setBounds(370, 80, 339, 35);
+        jLabel45.setBounds(140, 70, 339, 35);
 
-        jLabel1.setText("Department    :");
-        jLabel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(jLabel1);
-        jLabel1.setBounds(880, 110, 90, 20);
+        departmentLabel.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        departmentLabel.setText("Department    :");
+        jPanel1.add(departmentLabel);
+        departmentLabel.setBounds(650, 60, 150, 40);
         jPanel1.add(departmentDisplay);
         departmentDisplay.setBounds(980, 110, 120, 20);
+
+        departmentLabelField.setFont(new java.awt.Font("Trebuchet MS", 0, 20)); // NOI18N
+        jPanel1.add(departmentLabelField);
+        departmentLabelField.setBounds(830, 60, 150, 40);
+
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 51, 51));
+        jButton1.setText("Back");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1);
+        jButton1.setBounds(1050, 60, 90, 40);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1130, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1192, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 524, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 1, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 565, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        
+        new main_page().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -865,6 +885,8 @@ public class timetable extends javax.swing.JFrame {
     private javax.swing.JLabel d4;
     private javax.swing.JLabel d5;
     private javax.swing.JLabel departmentDisplay;
+    private javax.swing.JLabel departmentLabel;
+    private javax.swing.JLabel departmentLabelField;
     private javax.swing.JLabel e1;
     private javax.swing.JLabel e2;
     private javax.swing.JLabel e3;
@@ -895,7 +917,7 @@ public class timetable extends javax.swing.JFrame {
     private javax.swing.JLabel j3;
     private javax.swing.JLabel j4;
     private javax.swing.JLabel j5;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;

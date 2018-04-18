@@ -138,7 +138,7 @@ public class main_page extends javax.swing.JFrame {
         jLabel3.setText("B.Tech IT");
 
         IT2ndyear.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        IT2ndyear.setText("2nd year");
+        IT2ndyear.setText("3rd year");
         IT2ndyear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 IT2ndyearActionPerformed(evt);
@@ -146,7 +146,7 @@ public class main_page extends javax.swing.JFrame {
         });
 
         IT3rdyear.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        IT3rdyear.setText("3rd year");
+        IT3rdyear.setText("2nd year");
         IT3rdyear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 IT3rdyearActionPerformed(evt);
@@ -275,10 +275,11 @@ public class main_page extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton13))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(IT2ndyear)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(4, 4, 4)
                         .addComponent(IT3rdyear)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(IT2ndyear)
+                        .addGap(18, 18, 18)
                         .addComponent(jButton16))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(ecebutton)
@@ -333,12 +334,11 @@ public class main_page extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(IT2ndyear, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(IT3rdyear)
-                        .addComponent(jButton16)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(IT3rdyear)
+                    .addComponent(jButton16)
+                    .addComponent(IT2ndyear, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
