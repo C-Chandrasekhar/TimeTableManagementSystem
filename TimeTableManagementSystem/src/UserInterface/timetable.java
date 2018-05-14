@@ -43,12 +43,13 @@ public class timetable extends javax.swing.JFrame {
                 String time = classes.get(i).getMeetingTimeId();
                 String course = classes.get(i).getCourseId();
                 String instructor = classes.get(i).getInstructorId();
-                putText(time ,course , instructor );
+                String classRoomId= classes.get(i).getClassroomId();
+                putText(time ,course , instructor ,classRoomId);
             }
         }
     }
     
-    private void putText(String time , String course , String instructor){
+    private void putText(String time , String course , String instructor , String classRoomId){
   
         int index=0;
         String str="";
@@ -57,7 +58,7 @@ public class timetable extends javax.swing.JFrame {
         index =index*10;
         index = index + (time.charAt(1)-'a')+1;
         
-        labels.get(index).setText("<html>"+course+"<br>"+instructor);
+        labels.get(index).setText("<html>"+course+"<br>"+instructor + "<br>"+classRoomId);
     }
     
     /*
@@ -458,7 +459,7 @@ public class timetable extends javax.swing.JFrame {
         jPanel1.add(jLabel52);
         jLabel52.setBounds(10, 440, 130, 60);
 
-        b2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        b2.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         b2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(b2);
         b2.setBounds(240, 260, 100, 60);
@@ -529,37 +530,37 @@ public class timetable extends javax.swing.JFrame {
         jPanel1.add(jLabel74);
         jLabel74.setBounds(940, 160, 100, 40);
 
-        a3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        a3.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         a3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(a3);
         a3.setBounds(140, 320, 100, 60);
 
-        e3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        e3.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         e3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(e3);
         e3.setBounds(540, 320, 100, 60);
 
-        a5.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        a5.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         a5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(a5);
         a5.setBounds(140, 440, 100, 60);
 
-        b1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        b1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         b1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(b1);
         b1.setBounds(240, 200, 100, 60);
 
-        c1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        c1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         c1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(c1);
         c1.setBounds(340, 200, 100, 60);
 
-        d1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        d1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         d1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(d1);
         d1.setBounds(440, 200, 100, 60);
 
-        e1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        e1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         e1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(e1);
         e1.setBounds(540, 200, 100, 60);
@@ -569,42 +570,42 @@ public class timetable extends javax.swing.JFrame {
         jPanel1.add(f1);
         f1.setBounds(640, 200, 100, 60);
 
-        g1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        g1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         g1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(g1);
         g1.setBounds(740, 200, 100, 60);
 
-        h1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        h1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         h1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(h1);
         h1.setBounds(840, 200, 100, 60);
 
-        i1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        i1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         i1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(i1);
         i1.setBounds(940, 200, 100, 60);
 
-        j1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        j1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         j1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(j1);
         j1.setBounds(1040, 200, 100, 60);
 
-        a1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        a1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         a1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(a1);
         a1.setBounds(140, 200, 100, 60);
 
-        c2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        c2.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         c2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(c2);
         c2.setBounds(340, 260, 100, 60);
 
-        d2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        d2.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         d2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(d2);
         d2.setBounds(440, 260, 100, 60);
 
-        e2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        e2.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         e2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(e2);
         e2.setBounds(540, 260, 100, 60);
@@ -614,42 +615,42 @@ public class timetable extends javax.swing.JFrame {
         jPanel1.add(f2);
         f2.setBounds(640, 260, 100, 60);
 
-        g2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        g2.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         g2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(g2);
         g2.setBounds(740, 260, 100, 60);
 
-        h2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        h2.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         h2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(h2);
         h2.setBounds(840, 260, 100, 60);
 
-        i2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        i2.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         i2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(i2);
         i2.setBounds(940, 260, 100, 60);
 
-        j2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        j2.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         j2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(j2);
         j2.setBounds(1040, 260, 100, 60);
 
-        b3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        b3.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         b3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(b3);
         b3.setBounds(240, 320, 100, 60);
 
-        c3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        c3.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         c3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(c3);
         c3.setBounds(340, 320, 100, 60);
 
-        d3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        d3.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         d3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(d3);
         d3.setBounds(440, 320, 100, 60);
 
-        a2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        a2.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         a2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(a2);
         a2.setBounds(140, 260, 100, 60);
@@ -659,42 +660,42 @@ public class timetable extends javax.swing.JFrame {
         jPanel1.add(f3);
         f3.setBounds(640, 320, 100, 60);
 
-        g3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        g3.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         g3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(g3);
         g3.setBounds(740, 320, 100, 60);
 
-        h3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        h3.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         h3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(h3);
         h3.setBounds(840, 320, 100, 60);
 
-        i3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        i3.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         i3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(i3);
         i3.setBounds(940, 320, 100, 60);
 
-        j3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        j3.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         j3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(j3);
         j3.setBounds(1040, 320, 100, 60);
 
-        b4.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        b4.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         b4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(b4);
         b4.setBounds(240, 380, 100, 60);
 
-        c4.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        c4.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         c4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(c4);
         c4.setBounds(340, 380, 100, 60);
 
-        d4.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        d4.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         d4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(d4);
         d4.setBounds(440, 380, 100, 60);
 
-        e4.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        e4.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         e4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(e4);
         e4.setBounds(540, 380, 100, 60);
@@ -704,37 +705,37 @@ public class timetable extends javax.swing.JFrame {
         jPanel1.add(f4);
         f4.setBounds(640, 380, 100, 60);
 
-        h4.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        h4.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         h4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(h4);
         h4.setBounds(840, 380, 100, 60);
 
-        a4.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        a4.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         a4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(a4);
         a4.setBounds(140, 380, 100, 60);
 
-        i4.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        i4.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         i4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(i4);
         i4.setBounds(940, 380, 100, 60);
 
-        j4.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        j4.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         j4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(j4);
         j4.setBounds(1040, 380, 100, 60);
 
-        b5.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        b5.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         b5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(b5);
         b5.setBounds(240, 440, 100, 60);
 
-        c5.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        c5.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         c5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(c5);
         c5.setBounds(340, 440, 100, 60);
 
-        d5.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        d5.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         d5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(d5);
         d5.setBounds(440, 440, 100, 60);
@@ -744,22 +745,22 @@ public class timetable extends javax.swing.JFrame {
         jPanel1.add(f5);
         f5.setBounds(640, 440, 100, 60);
 
-        g4.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        g4.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         g4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(g4);
         g4.setBounds(740, 380, 100, 60);
 
-        g5.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        g5.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         g5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(g5);
         g5.setBounds(740, 440, 100, 60);
 
-        h5.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        h5.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         h5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(h5);
         h5.setBounds(840, 440, 100, 60);
 
-        i5.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        i5.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         i5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(i5);
         i5.setBounds(940, 440, 100, 60);
@@ -769,7 +770,7 @@ public class timetable extends javax.swing.JFrame {
         jPanel1.add(j5);
         j5.setBounds(1040, 440, 100, 60);
 
-        e5.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        e5.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         e5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(e5);
         e5.setBounds(540, 440, 100, 60);

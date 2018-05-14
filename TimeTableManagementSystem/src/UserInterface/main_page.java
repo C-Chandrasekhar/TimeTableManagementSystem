@@ -24,7 +24,8 @@ public class main_page extends javax.swing.JFrame {
      */
     public main_page()  {
         initComponents();
-        //getData();
+        
+        getData();
     }
 
     /**
@@ -124,6 +125,11 @@ public class main_page extends javax.swing.JFrame {
 
         jButton10.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jButton10.setText("3rd year-CSA");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
 
         jButton11.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jButton11.setText("3rd year-CSB");
@@ -385,7 +391,7 @@ public class main_page extends javax.swing.JFrame {
     }//GEN-LAST:event_ecebuttonActionPerformed
 
     private void IT2ndyearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IT2ndyearActionPerformed
-        getData();
+       
         department="IT";
        new timetable().setVisible(true);
     }//GEN-LAST:event_IT2ndyearActionPerformed
@@ -401,7 +407,8 @@ public class main_page extends javax.swing.JFrame {
        Connection conn=MySql.ConnectDB();
        Statement stat=null;
        ResultSet res=null;
-       
+        //department="";
+        classes.clear();
         System.out.println("connected to database");
         String sql="select * from class";
         
@@ -433,6 +440,13 @@ public class main_page extends javax.swing.JFrame {
     private void IT3rdyearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IT3rdyearActionPerformed
         
     }//GEN-LAST:event_IT3rdyearActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        
+        department ="CSEa";
+        new timetable().setVisible(true);
+        
+    }//GEN-LAST:event_jButton10ActionPerformed
 
     /**
      * @param args the command line arguments

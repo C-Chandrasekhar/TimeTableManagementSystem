@@ -164,7 +164,7 @@ public class admin_login extends javax.swing.JFrame {
     }//GEN-LAST:event_loginButtonActionPerformed
 
     private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
-        //new main_page().setVisible(true);
+        new main_page().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_cancelButtonActionPerformed
 

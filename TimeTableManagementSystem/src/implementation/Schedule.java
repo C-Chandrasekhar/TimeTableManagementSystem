@@ -22,7 +22,8 @@ public class Schedule {
     public Schedule(Data data){
         this.data=data;
         classes= new ArrayList<Class>(data.getNumberOfClasses());
-    } 
+    }
+    
     public Data getData(){
         return data;
     }
@@ -78,7 +79,6 @@ public class Schedule {
                      MeetingTime newMeetingTime1= new MeetingTime(newTime1);
                      newClass3.setMeetingTime(newMeetingTime1);
                      
-                     
                      instructorsFix=data.getInstructorsFix();
                         for (int ite=0;ite<instructorsFix.size();ite++){
                             if(instructorsFix.get(ite).getDepartmentFix().getName().equals(dept.get(i).getName()) 
@@ -120,27 +120,29 @@ public class Schedule {
     }
     
     public double calculateFitness(){
-        numberOfConflicts=0;
-        for (int i=0;i<classes.size(); i++){
-            Class x= classes.get(i);
-            
-            if(x.getMeetingTime().getId().charAt(1)=='f'){
-                numberOfConflicts++;
-            }
-            if(x.getRoom().getCapacity() < x.getDepartment().getCapacity())
-                numberOfConflicts++;
-            
-            for (int j=0;j<classes.size();j++){
-                Class y = classes.get(j);
-                if(y.getMeetingTime() == x.getMeetingTime() && y.getId()!= x.getId()){
-                    if(x.getRoom()== y.getRoom())
-                        numberOfConflicts++;
-                    if(x.getInstructor()== y.getInstructor())
-                        numberOfConflicts++;
-                }
-            }
-        }
-        return 1/(double)(numberOfConflicts+1) ;
+        //numberOfConflicts=0;
+        Constraints constraint = new Constraints(classes);
+        return constraint.calculateFitness();
+//        for (int i=0;i<classes.size(); i++){
+//            Class x= classes.get(i);
+//            
+//            if(x.getMeetingTime().getId().charAt(1)=='f'){
+//                numberOfConflicts++;
+//            }
+//            if(x.getRoom().getCapacity() < x.getDepartment().getCapacity())
+//                numberOfConflicts++;
+//            
+//            for (int j=0;j<classes.size();j++){
+//                Class y = classes.get(j);
+//                if(y.getMeetingTime() == x.getMeetingTime() && y.getId()!= x.getId()){
+//                    if(x.getRoom().getId().equals(y.getRoom().getId()))
+//                        numberOfConflicts++;
+//                    if(x.getInstructor().getId().equals(y.getInstructor().getId()))
+//                        numberOfConflicts++;
+//                }
+//            }
+//        }
+//        return 1/(double)(numberOfConflicts+1) ;
     }
     
     public String toString(){

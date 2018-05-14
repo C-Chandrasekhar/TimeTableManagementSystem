@@ -17,7 +17,7 @@ public class Driver {
      public static final double MUTATION_RATE= 0.1;
      public static final double CROSSOVER_RATE=0.9;
      public static final int SELECTION_SIZE=3;
-     public static final int NUM_ELITE=1;
+     public static final int NUM=1;
      
      private int scheduleNumb=0;
      private Data data;

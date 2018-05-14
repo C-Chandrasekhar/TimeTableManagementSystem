@@ -24,9 +24,10 @@ public class GeneticAlgorithm {
     
     Population crossoverPopulation (Population population){
         Population crossoverPopulation = new Population(population.getSchedules().size(), data);
-        for (int i=0;i<Driver.NUM_ELITE; i++)
+        for (int i=0;i<Driver.NUM; i++)
             crossoverPopulation.getSchedules().set(i, population.getSchedules().get(i));
-        for (int i=Driver.NUM_ELITE; i<population.getSchedules().size();i++){
+        
+        for (int i=Driver.NUM; i<population.getSchedules().size();i++){
             if(Driver.CROSSOVER_RATE > Math.random()){
                 Schedule schedule1= selectTournamentPopulation(population).sortByFitness().getSchedules().get(0);
                 Schedule schedule2= selectTournamentPopulation(population).sortByFitness().getSchedules().get(0);
@@ -59,9 +60,9 @@ public class GeneticAlgorithm {
     Population mutatePopulation (Population population){
         Population mutatePopulation = new Population(population.getSchedules().size(), data);
         ArrayList<Schedule> schedules= mutatePopulation.getSchedules();
-        for (int i=0;i<Driver.NUM_ELITE;i++)
+        for (int i=0;i<Driver.NUM;i++)
             schedules.set(i, population.getSchedules().get(i));
-        for (int i=Driver.NUM_ELITE; i< population.getSchedules().size();i++)
+        for (int i=Driver.NUM; i< population.getSchedules().size();i++)
             schedules.set(i, mutateSchedule(population.getSchedules().get(i)));
         return mutatePopulation;
     }
@@ -81,8 +82,8 @@ public class GeneticAlgorithm {
     Population selectTournamentPopulation (Population population){
         Population tournamentPopulation = new Population(Driver.POPULATION_SIZE, data);
         for (int i=0;i<Driver.POPULATION_SIZE;i++){
-            tournamentPopulation.getSchedules().set(i, population.getSchedules().get(
-                                        (int)(Math.random()* population.getSchedules().size())));
+            tournamentPopulation.getSchedules().set(i, 
+                    population.getSchedules().get((int)(Math.random()* population.getSchedules().size())));
         }
         return tournamentPopulation;
     }
